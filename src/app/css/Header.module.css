@@ -1,0 +1,113 @@
+.topbar {
+  display: block;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 0 3.125rem !important;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.25rem;
+  border-bottom: 1px solid rgba(159, 161, 163, 0.225) !important;
+  z-index: 702;
+  transition: transform 0.8s ease;
+}
+.header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.8s ease;
+}
+.header .logo a {
+  display: block;
+}
+.header .logo a svg {
+  width: 7rem;
+  height: 1.875rem;
+}
+.header .globalWrap {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.header .globalWrap .contactButton {
+  background: #e74a1e;
+  color: rgb(255, 255, 255);
+  mix-blend-mode: normal !important;
+  font-size: 1.125rem;
+  padding: 0.875rem 2.25rem;
+  border-radius: 0.625rem;
+  border: 0;
+}
+.header .globalWrap .globalMenuBtn {
+  border: 0;
+  background: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1.875rem;
+  height: 1.625rem;
+}
+.header .globalWrap .globalMenuBtn .bar {
+  width: 1px;
+  height: 100%;
+  background: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .header {
+    padding: 0 calc(50 / 1280 * 100vw) !important;
+    height: calc(100 / 1280 * 100vw);
+  }
+  .header .logo a {
+    display: block;
+  }
+  .header .logo a svg {
+    width: calc(112 / 1280 * 100vw);
+    height: calc(30 / 1280 * 100vw);
+  }
+  .header .globalWrap {
+    gap: calc(30 / 1280 * 100vw);
+  }
+  .header .globalWrap .contactButton {
+    font-size: calc(16 / 1280 * 100vw);
+    padding: calc(10 / 1280 * 100vw) calc(21 / 1280 * 100vw);
+    border-radius: calc(10 / 1280 * 100vw);
+    border: 0;
+  }
+  .header .globalWrap .globalMenuBtn {
+    width: 1.875rem;
+    height: 1.625rem;
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .header {
+    padding: 0 calc(15 / 768 * 100vw) !important;
+    height: calc(115 / 768 * 100vw);
+  }
+  .header .logo a {
+    display: block;
+  }
+  .header .logo a svg {
+    width: calc(140 / 768 * 100vw);
+    height: calc(39 / 768 * 100vw);
+  }
+  .header .globalWrap {
+    gap: calc(30 / 768 * 100vw);
+  }
+  .header .globalWrap .contactButton {
+    font-size: calc(24 / 768 * 100vw);
+    padding: calc(10 / 768 * 100vw) calc(24 / 768 * 100vw);
+    border-radius: calc(10 / 768 * 100vw);
+    border: 0;
+  }
+  .header .globalWrap .globalMenuBtn {
+    width: calc(50 / 768 * 100vw);
+    height: calc(45 / 768 * 100vw);
+  }
+  .header .globalWrap .globalMenuBtn .bar {
+    width: calc(1 / 768 * 100vw);
+  }
+}

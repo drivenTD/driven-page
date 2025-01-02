@@ -1,0 +1,171 @@
+@import "../../styles/mixin.scss";
+
+.subVisual {
+  position: relative;
+  padding: rem(250) 0 rem(100);
+  height: 100vh;
+  border-bottom: 1px solid $grid-line-color;
+  overflow:hidden;
+
+  .radialGrad {
+    position: absolute;
+    top: rem(-300);
+    right: rem(-1700);
+    width: rem(2400);
+    height: rem(2400);
+    background: $main-color;
+    
+    background: radial-gradient(circle, $main-color 0%, rgba(230, 232, 236, .3) 60%);
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: vwpc(70);
+    left: 50%;
+    transform: translateX(-50%);
+    .scrollBtn {
+      border: 0;
+      background: none;
+      width: vwpc(100);
+      height: vwpc(100);
+    }
+  }
+
+  .visualWrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttonWrap {
+    
+    a {
+      mix-blend-mode: normal;
+      color: $black-color;
+      background: none;
+      svg {
+        mix-blend-mode: difference;
+      }
+    }
+  }
+  .titleWrap {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      
+      font-size: vwpc(130);
+      font-weight: 700;
+      span {
+        display: block;
+        &.pagePosition {
+          font-size: vwpc(40);
+          font-weight: 300;
+          color: $black-color-opacity;
+        }
+        &.pageName {
+          padding-left: vwpc(150);
+        }
+      }
+    }
+
+    .subText {
+      padding-top: vwpc(60);
+      p {
+        color: $black-color-opacity;
+        font-size: vwpc(26);
+        line-height: vwpc(46);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .subVisual {
+    height: vwtb(800);
+    padding: vwtb(234) 0 vwtb(60);
+    .radialGrad {
+      top: vwtb(0);
+      right: vwtb(-1200);
+      width: vwtb(1650);
+      height: vwtb(1650);
+    }
+
+    .scroll {
+      bottom: vwtb(50);
+      .scrollBtn {
+        width: vwtb(70);
+        height: vwtb(70);
+      }
+    }
+
+    .titleWrap {
+      h2 {
+        font-size: vwtb(100);
+        span {
+          &.pagePosition {
+            font-size: vwtb(30);
+          }
+          &.pageName {
+            padding-left: vwtb(130);
+          }
+        }
+      }
+
+      .subText {
+        padding-top: vwtb(40);
+        p {
+          font-size: vwtb(16);
+          line-height: vwtb(26);
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .subVisual {
+    height: vwmo(1024);
+    padding: vwmo(234) 0 0;
+
+    .radialGrad {
+      top: vwmo(-50);
+      right: vwmo(-1050);
+      width: vwmo(1420);
+      height: vwmo(1420);
+    }
+
+    .scroll {
+      display: none;
+    }
+
+    .visualWrap {
+      height: 100%;
+      gap: vwmo(100);
+      flex-direction: column-reverse;
+    }
+    .titleWrap {
+      flex-direction: column;
+      h2 {
+        font-size: vwmo(100);
+        span {
+          &.pagePosition {
+            font-size: vwmo(28);
+            margin-bottom: vwmo(20);
+          }
+          &.pageName {
+            padding-left: vwmo(150);
+          }
+        }
+      }
+
+      .subText {
+        padding-top: vwmo(90);
+        p {
+          font-size: vwmo(30);
+          line-height: vwmo(50);
+        }
+      }
+    }
+  }
+}

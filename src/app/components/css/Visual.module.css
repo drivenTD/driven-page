@@ -1,0 +1,159 @@
+.visual {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.visual .textWrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.visual .textWrap .tit {
+  font-size: calc(210 / 1920 * 100vw);
+  line-height: 100%;
+  font-weight: 800;
+}
+.visual .textWrap .tit span {
+  opacity: 0;
+}
+.visual .textWrap .boxWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4.375rem;
+}
+.visual .textWrap .boxWrap .desc {
+  opacity: 0;
+  font-size: calc(28 / 1920 * 100vw);
+  line-height: calc(48 / 1920 * 100vw);
+  font-weight: 300;
+}
+.visual .textWrap .boxWrap .buttonWrap {
+  opacity: 0;
+}
+.visual .backgroundVideo {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  overflow: hidden;
+}
+.visual .backgroundVideo::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0.2) 70%, rgb(0, 0, 0) 100%);
+}
+.visual .backgroundVideo video {
+  width: calc(2200 / 1920 * 100vw);
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .visual .textWrap {
+    padding-bottom: calc(70 / 1280 * 100vw);
+  }
+  .visual .textWrap .tit {
+    font-size: calc(120 / 1280 * 100vw);
+    line-height: 100%;
+    font-weight: 800;
+  }
+  .visual .textWrap .boxWrap {
+    gap: calc(90 / 1280 * 100vw);
+  }
+  .visual .textWrap .boxWrap .desc {
+    font-size: calc(20 / 1280 * 100vw);
+    line-height: calc(40 / 1280 * 100vw);
+    font-weight: 300;
+  }
+  .visual .textWrap .boxWrap .buttonWrap {
+    padding-left: calc((99.99vw - max(1.75em, 1.75vw) * 2) / 4);
+  }
+  .visual .backgroundVideo video {
+    width: auto;
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .visual {
+    height: calc(920 / 768 * 100vw);
+    overflow: hidden;
+  }
+  .visual .textWrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    gap: calc(20 / 768 * 100vw);
+  }
+  .visual .textWrap .tit {
+    font-size: calc(80 / 768 * 100vw);
+    line-height: 100%;
+    font-weight: 800;
+    padding-left: calc(15 / 768 * 100vw);
+  }
+  .visual .textWrap .boxWrap {
+    display: flex;
+    flex-direction: column;
+    gap: calc(45 / 768 * 100vw);
+    padding-left: 0;
+  }
+  .visual .textWrap .boxWrap .desc {
+    opacity: 0;
+    font-size: calc(54 / 1920 * 100vw);
+    line-height: calc(74 / 1920 * 100vw);
+    font-weight: 300;
+  }
+  .visual .textWrap .boxWrap .buttonWrap {
+    padding-left: 48.041875vw;
+    opacity: 0;
+  }
+  .visual .backgroundVideo {
+    width: 100%;
+    height: calc(920 / 768 * 100vw);
+    overflow: hidden;
+  }
+  .visual .backgroundVideo::before {
+    bottom: 0;
+  }
+  .visual .backgroundVideo video {
+    width: calc(1920 / 768 * 100vw);
+  }
+};
+  }
+  .subVisual .visualWrap {
+    height: 100%;
+    gap: calc(100 / 768 * 100vw);
+    flex-direction: column-reverse;
+  }
+  .subVisual .titleWrap {
+    flex-direction: column;
+  }
+  .subVisual .titleWrap h2 {
+    font-size: calc(100 / 768 * 100vw);
+  }
+  .subVisual .titleWrap h2 span.pagePosition {
+    font-size: calc(28 / 768 * 100vw);
+    margin-bottom: calc(20 / 768 * 100vw);
+  }
+  .subVisual .titleWrap h2 span.pageName {
+    padding-left: calc(150 / 768 * 100vw);
+  }
+  .subVisual .titleWrap .subText {
+    padding-top: calc(90 / 768 * 100vw);
+  }
+  .subVisual .titleWrap .subText p {
+    font-size: calc(30 / 768 * 100vw);
+    line-height: calc(50 / 768 * 100vw);
+  }
+}

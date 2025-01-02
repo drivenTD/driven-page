@@ -1,0 +1,198 @@
+@import "../../styles/mixin.scss";
+
+.portfolioSection {
+  position: relative;
+  overflow: hidden;
+  padding: rem(200) 0 rem(200);
+  color: $white-color;
+  border-bottom: 1px solid $grid-line-color;
+  z-index: 2;
+
+  .title {
+    padding-bottom: rem(60);
+    margin-bottom: rem(60);
+  }
+
+  .portfolioLists {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+    .item {
+      width: 100%;
+      height: rem(410);
+      opacity: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      background: $white-color;
+      border-radius: rem(30);
+      background-size: cover !important;
+      padding: rem(50) rem(70);
+      color: $white-color;
+
+      &:first-child {
+        opacity: 1;
+      }
+
+      &.completed {
+        filter: blur(2px);
+      }
+
+      .tit {
+        font-size: rem(40);
+        line-height: rem(50);
+        font-weight: 700;
+      }
+
+      .descBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .desc {
+          font-size: rem(28);
+          font-weight: 500;
+        }
+
+        .descList {
+          display: flex;
+          position: relative;
+          font-size: rem(20);
+          gap: rem(10);
+          li {
+            display: flex;
+            gap: rem(10);
+            &::before {
+              content: "·";
+              display: block;
+            }
+            &:first-child {
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .portfolioAbout {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+    margin-top: rem(70);
+    .portfolioDesc {
+      font-size: rem(28);
+      line-height: rem(48);
+    }
+  }
+}
+
+@include tablet {
+  .portfolioSection {
+    padding: vwtb(100) 0 vwtb(100);
+
+    .title {
+      padding-bottom: vwtb(40);
+      margin-bottom: vwtb(40);
+    }
+
+    .portfolioLists {
+      gap: vwtb(30);
+      .item {
+        height: vwtb(380);
+        border-radius: vwtb(30);
+        padding: vwtb(50) vwtb(60);
+
+        .tit {
+          font-size: vwtb(30);
+          line-height: vwtb(40);
+        }
+
+        .descBox {
+          .desc {
+            font-size: vwtb(24);
+          }
+
+          .descList {
+            font-size: vwtb(18);
+            gap: vwtb(5);
+            li {
+              gap: vwtb(5);
+            }
+          }
+        }
+      }
+    }
+    .portfolioAbout {
+      gap: vwtb(40);
+      margin-top: vwtb(60);
+      .portfolioDesc {
+        font-size: vwtb(20);
+        line-height: vwtb(40);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .portfolioSection {
+    padding: vwmo(110) 0 vwmo(110);
+
+    .title {
+      padding-bottom: vwmo(30);
+      margin-bottom: vwmo(30);
+    }
+
+    .portfolioLists {
+      gap: vwmo(50);
+      .item {
+        height: vwmo(420);
+        border-radius: vwmo(30);
+        padding: vwmo(40) vwmo(30);
+        opacity: 1;
+
+        .tit {
+          font-size: vwmo(36);
+          line-height: vwmo(46);
+        }
+
+        .descBox {
+          flex-direction: column;
+          align-items: start;
+          gap: vwmo(20);
+          .desc {
+            font-size: vwmo(32);
+          }
+
+          .descList {
+            flex-wrap: wrap;
+            font-size: vwmo(24);
+            gap: vwmo(5);
+            li {
+              gap: vwmo(5);
+              color: $white-color;
+              background-color: $black-color;
+              border-radius: vwmo(30);
+              padding: vwmo(12) vwmo(10);
+              &::before {
+                content: "";
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .portfolioAbout {
+        gap: vwmo(40);
+        margin-top: vwmo(60);
+        .portfolioDesc {
+          font-size: vwmo(34);
+          line-height: vwmo(54);
+        }
+      }
+  }
+}

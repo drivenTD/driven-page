@@ -1,0 +1,152 @@
+$base: 16;
+$pc-size: 1920;
+$tablet-size: 1280;
+$mobile-size: 768;
+
+$col-gap: max(1.75em, 1.75vw); //$col-gap: max(1.75em, 1.75vw);
+$single-grid-col: calc((99.99vw - ($col-gap * 2)) / 5);
+
+$single-grid-tb-col: calc((99.99vw - ($col-gap * 2)) / 4);
+$single-grid-tb2-col: calc((99.99vw - ($col-gap * 2)) / 3);
+
+$col-mo-gap: calc(15 / 768 * 100vw);;
+$single-grid-mo-col: calc((99.99vw - ($col-mo-gap * 2)) / 2);
+
+//colors
+$main-color: #e74a1e;
+$sub-color: #00e1ff;
+$sub-bg-color: #E6E8EC;
+$black-color: rgba(0, 0, 0, 1);
+$black-color-opacity: rgba(0, 0, 0, 0.4);
+$white-color: rgba(255, 255, 255, 1);
+$white-color-opacity: rgba(255, 255, 255, 0.4);
+$grid-line-color: rgba(159, 161, 163, 0.225);
+
+// view width
+$breakpoint-mobile: 1px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+
+
+@function rem($px) {
+  @return calc($px / $base) * 1rem;
+}
+
+@function vwpc($px) {
+  @return calc($px / #{$pc-size} * 100vw);
+}
+
+@function vwtb($px) {
+  @return calc($px / #{$tablet-size} * 100vw);
+}
+
+@function vwmo($px) {
+  @return calc($px / #{$mobile-size} * 100vw);
+}
+
+// button
+@mixin btn($font-size, $padding, $border-radius) {
+  font-size: $font-size;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: 0;
+}
+
+@mixin btn-line($border-size, $font-size, $padding-vertical, $padding-horizontal) {
+  border-left: $border-size solid $main-color;
+  font-size: $font-size;
+  padding: $padding-vertical $padding-horizontal;
+}
+
+// Text
+@mixin text($font-size, $line-height, $font-weight){
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+//Colum
+@mixin column($col) {
+  width: calc($single-grid-col * $col);
+}
+@mixin column-span($span){
+  padding-left: calc($single-grid-col * $span);
+}
+
+@mixin column-tb($col) {
+  width: calc($single-grid-tb-col * $col);
+}
+@mixin column-tb-span($span){
+  padding-left: calc($single-grid-tb-col * $span);
+}
+
+@mixin column-tb2($col) {
+  width: calc($single-grid-tb2-col * $col);
+}
+@mixin column-tb2-span($span){
+  padding-left: calc($single-grid-tb2-col * $span);
+}
+
+@mixin column-mo($col) {
+  width: calc($single-grid-mo-col * $col);
+}
+@mixin column-mo-span($span){
+  padding-left: calc($single-grid-mo-col * $span);
+}
+
+@mixin column-padding($padding-left, $padding-right){
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+
+@mixin mobileTablet {
+  @media (min-width : #{$breakpoint-mobile}) and (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width : #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width : #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width : #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+
+
+
+// @keyframes을 생성시키는 mixin 설정
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+      @content;
+  }
+  @-moz-keyframes #{$animationName} {
+      @content;
+  }
+  @keyframes #{$animationName} {
+      @content;
+  }
+}
+
+
+
+
+
+// $container-width: 1920;
+// $side-padding: 50;
+// $columns: 5;
+
+// $usable-width: $container-width - ($side-padding * 2);
+// $single-column-width: vwpc($usable-width / $columns); // 결과: 364px

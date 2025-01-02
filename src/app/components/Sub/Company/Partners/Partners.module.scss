@@ -1,0 +1,133 @@
+@import "../../../../styles/mixin.scss";
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); // 시작 위치
+  }
+  100% {
+    transform: translateX(-100%); // 끝 위치
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(-100%); // 시작 위치
+  }
+  100% {
+    transform: translateX(0); // 끝 위치
+  }
+}
+
+.partnerSection {
+  position: relative;
+  padding: rem(200) 0;
+  overflow: hidden;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: vwpc(82);
+  }
+  .partnersGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: vwpc(30);
+
+    .partnerItem {
+      width: vwpc(200);
+      flex: 0 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      animation: marquee 60s linear infinite;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      animation: marquee2 60s linear infinite;
+    }
+  }
+
+  .txtBox {
+    padding: vwpc(115) 0;
+    text-align: center;
+    font-size: vwpc(40);
+    line-height: vwpc(70);
+  }
+}
+
+@include tablet {
+  .partnerSection {
+    padding: vwtb(150) 0;
+    .wrap {
+      gap: vwtb(70);
+    }
+    .partnersGrid {
+      gap: vwtb(30);
+
+      .partnerItem {
+        width: vwtb(200);
+      }
+    }
+
+    .txtBox {
+      padding: vwtb(120) 0;
+      text-align: center;
+      font-size: vwtb(30);
+      line-height: vwtb(60);
+    }
+  }
+}
+
+@include mobile {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); // 시작 위치
+    }
+    100% {
+      transform: translateX(-500%); // 끝 위치
+    }
+  }
+  
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(-500%); // 시작 위치
+    }
+    100% {
+      transform: translateX(0); // 끝 위치
+    }
+  }
+
+  .partnerSection {
+    padding: vwmo(160) 0;
+    .wrap {
+      gap: vwmo(70);
+    }
+    .partnersGrid {
+      gap: vwmo(30);
+
+      .partnerItem {
+        width: vwmo(200);
+      }
+      
+      &:nth-child(1),
+      &:nth-child(3) {
+        animation: marquee 60s linear infinite;
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        animation: marquee2 60s linear infinite;
+      }
+    }
+
+    .txtBox {
+      padding: vwmo(80) 0;
+      text-align: center;
+      font-size: vwmo(40);
+      line-height: vwmo(62);
+    }
+  }
+}

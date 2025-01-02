@@ -1,0 +1,230 @@
+@charset "UTF-8";
+.solutionSection {
+  padding: 18.75rem 0 0;
+  margin: auto;
+  position: relative;
+  color: rgb(255, 255, 255);
+  border-radius: 1.875rem 1.875rem 0 0;
+  overflow: hidden;
+}
+.solutionSection .bgScale {
+  background: #f5f7fa;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.solutionSection .wrap {
+  padding: 6.25rem 0 0;
+}
+.solutionSection .title .tit {
+  color: rgba(0, 0, 0, 0.4);
+}
+.solutionSection .title .tit span {
+  color: rgb(0, 0, 0);
+}
+.solutionSection .solutionLists {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(0, 0, 0);
+}
+.solutionSection .solutionLists .item {
+  height: 26.875rem;
+  border-bottom: 1px solid rgba(159, 161, 163, 0.225);
+  padding: 1.875rem 0.9375rem;
+}
+.solutionSection .solutionLists .item:hover {
+  background: #E6E8EC;
+}
+.solutionSection .solutionLists .item .head {
+  height: 3.75rem;
+}
+.solutionSection .solutionLists .item .head .number {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.125rem;
+  font-weight: 800;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.solutionSection .solutionLists .item .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 3.75rem);
+}
+.solutionSection .solutionLists .item .body .cont {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+.solutionSection .solutionLists .item .body .foot {
+  display: flex;
+  gap: 0.3125rem;
+}
+.solutionSection .solutionLists .item .body .foot span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  gap: 0.3125rem;
+}
+.solutionSection .solutionLists .item .body .foot span:first-child::before {
+  display: none;
+}
+.solutionSection .solutionLists .item .body .foot span::before {
+  content: "·";
+  display: block;
+}
+.solutionSection .solutionLists .disability {
+  position: relative;
+  overflow: hidden;
+}
+.solutionSection .solutionLists .disability > * {
+  display: none;
+}
+.solutionSection .marqueeSolution {
+  position: relative;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background: #e74a1e;
+  padding: 1.25rem 0;
+  z-index: 2;
+}
+.solutionSection .marqueeSolution .marqueeLists {
+  display: flex;
+  gap: 1.875rem;
+  animation: marquee 60s linear infinite;
+  white-space: nowrap;
+}
+.solutionSection .marqueeSolution .item {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+  font-size: 6.25rem;
+  font-weight: bold;
+}
+.solutionSection .marqueeSolution .item::after {
+  display: block;
+  content: "·";
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .solutionSection {
+    padding: calc(250 / 1280 * 100vw) 0 0;
+    border-radius: calc(30 / 1280 * 100vw) calc(30 / 1280 * 100vw) 0 0;
+  }
+  .solutionSection .bgScale {
+    width: calc(100 / 1280 * 100vw);
+    height: calc(100 / 1280 * 100vw);
+  }
+  .solutionSection .wrap {
+    padding: calc(100 / 1280 * 100vw) 0 0;
+  }
+  .solutionSection .solutionLists .item {
+    height: calc(390 / 1280 * 100vw);
+    padding: calc(30 / 1280 * 100vw) calc(15 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .head {
+    height: calc(60 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .head .number {
+    width: calc(30 / 1280 * 100vw);
+    height: calc(30 / 1280 * 100vw);
+    font-size: calc(18 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body {
+    height: calc(100% - 60 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .cont {
+    font-size: calc(22 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .foot {
+    gap: calc(5 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .foot span {
+    font-size: calc(15 / 1280 * 100vw);
+    gap: calc(5 / 1280 * 100vw);
+  }
+  .solutionSection .solutionLists .disability:first-child, .solutionSection .solutionLists .disability:nth-child(11) {
+    display: none;
+  }
+  .solutionSection .marqueeSolution {
+    padding: calc(20 / 1280 * 100vw) 0;
+  }
+  .solutionSection .marqueeSolution .marqueeLists {
+    gap: calc(20 / 1280 * 100vw);
+  }
+  .solutionSection .marqueeSolution .item {
+    gap: calc(20 / 1280 * 100vw);
+    font-size: calc(70 / 1280 * 100vw);
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .solutionSection {
+    padding: calc(200 / 768 * 100vw) 0 0;
+    border-radius: calc(30 / 768 * 100vw) calc(30 / 768 * 100vw) 0 0;
+  }
+  .solutionSection .bgScale {
+    width: calc(100 / 768 * 100vw);
+    height: calc(100 / 768 * 100vw);
+  }
+  .solutionSection .wrap {
+    padding: calc(100 / 768 * 100vw) 0 0;
+  }
+  .solutionSection .solutionLists {
+    color: rgb(0, 0, 0);
+  }
+  .solutionSection .solutionLists .item {
+    height: calc(390 / 768 * 100vw);
+    padding: calc(30 / 768 * 100vw) calc(20 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .head {
+    height: calc(70 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .head .number {
+    width: calc(40 / 768 * 100vw);
+    height: calc(40 / 768 * 100vw);
+    font-size: calc(22 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body {
+    height: calc(100% - 70 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .cont {
+    font-size: calc(32 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .foot {
+    flex-wrap: wrap;
+    gap: calc(5 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .item .body .foot span {
+    font-size: calc(24 / 768 * 100vw);
+    gap: calc(5 / 768 * 100vw);
+  }
+  .solutionSection .solutionLists .disability {
+    display: none;
+  }
+  .solutionSection .marqueeSolution .marqueeLists {
+    gap: calc(20 / 768 * 100vw);
+  }
+  .solutionSection .marqueeSolution .item {
+    gap: calc(20 / 768 * 100vw);
+    font-size: calc(70 / 768 * 100vw);
+  }
+}

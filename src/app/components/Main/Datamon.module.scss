@@ -1,0 +1,243 @@
+@import "../../styles/mixin.scss";
+
+.datamonSection {
+  overflow: hidden;
+  position: relative;
+  padding: rem(200) 0 rem(200);
+  color: $white-color;
+  border-bottom: 1px solid $grid-line-color;
+  z-index: 2;
+  background: url(/datamon/graphBg.png) no-repeat center center;
+  background-size: cover;
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .motionRoundImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imgBox {
+      opacity: 0;
+      transform: translateY(rem(50));
+      width: vwpc(490);
+      height: vwpc(743);
+      border-radius: rem(1200) rem(200) rem(400) rem(800);
+      overflow: hidden;
+    }
+    .lineBox {
+      transform: translateY(rem(50));
+      width: vwpc(490);
+      height: vwpc(743);
+      border-radius: rem(1200) rem(200) rem(400) rem(800);
+      border: 1px solid $grid-line-color;
+      z-index: -1;
+      position: absolute;
+      left: rem(85);
+      top: 0;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: vwpc(60);
+    .tabsTit {
+      opacity: 0;
+      transform: translateX(rem(500));
+      font-size: vwpc(60);
+      line-height: vwpc(80);
+      font-weight: 700;
+      span {
+        display: block;
+        font-size: rem(24);
+        margin-bottom: rem(15);
+        line-height: 100%;
+        color: $white-color-opacity;
+      }
+    }
+
+    .tabList {
+      opacity: 0;
+      transform: translateY(rem(50));
+      display: flex;
+      position: relative;
+      gap: rem(50);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -100vw;
+        right: 0;
+        width: 200vw;
+        height: 1px;
+        background: $grid-line-color;
+      }
+      button {
+        font-size: vwpc(20);
+        line-height: vwpc(50);
+        letter-spacing: -2%;
+        border: 0;
+        background: none;
+        color: $white-color-opacity;
+        &.active {
+          color: $white-color;
+          border-bottom: 1px solid $main-color;
+        }
+      }
+    }
+
+    .tabArea {
+      opacity: 0;
+      transform: translateY(rem(50));
+    }
+
+    .tabItem {
+      height: 0;
+      display: flex;
+      align-items: start;
+      visibility: hidden;
+      font-size: rem(20);
+      line-height: rem(30);
+      &.active {
+        visibility: visible;
+        height: auto;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .datamonSection {
+    padding: vwtb(100) 0 vwtb(100);
+    background: url(/datamon/graphBg.png) no-repeat center center;
+    background-size: cover;
+
+    .motionRoundImg {
+      .imgBox {
+        transform: translateY(vwtb(50));
+        width: vwtb(305);
+        height: vwtb(462);
+        border-radius: vwtb(1200) vwtb(200) vwtb(400) vwtb(800);
+      }
+      .lineBox {
+        transform: translateY(vwtb(50));
+        width: vwtb(305);
+        height: vwtb(462);
+        border-radius: vwtb(1200) vwtb(200) vwtb(400) vwtb(800);
+        left: vwtb(85);
+      }
+    }
+
+    .tabs {
+      gap: vwtb(40);
+      .tabsTit {
+        transform: translateY(vwtb(50));
+        font-size: vwtb(32);
+        line-height: vwtb(52);
+        span {
+          font-size: vwtb(16);
+          margin-bottom: vwtb(10);
+        }
+      }
+
+      .tabList {
+        transform: translateY(vwtb(50));
+        gap: vwtb(10);
+
+        button {
+          font-size: vwtb(16);
+          line-height: vwtb(53);
+          letter-spacing: vwtb(-0.2);
+        }
+      }
+
+      .tabArea {
+        transform: translateY(vwtb(50));
+      }
+
+      .tabItem {
+        font-size: vwtb(16);
+        line-height: vwtb(26);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .datamonSection {
+    padding: vwmo(200) 0 vwmo(200);
+    background: url(/datamon/graphBg.png) no-repeat center center;
+    background-size: 100%;
+
+    .flex {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .motionRoundImg {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .imgBox {
+        transform: translateY(vwmo(50));
+        width: vwmo(405);
+        height: vwmo(615);
+        border-radius: vwmo(1200) vwmo(200) vwmo(400) vwmo(800);
+      }
+      .lineBox {
+        transform: translateY(vwmo(50));
+        width: vwmo(405);
+        height: vwmo(615);
+        border-radius: vwmo(1200) vwmo(200) vwmo(400) vwmo(800);
+        left: vwmo(140);
+        top:0;
+      }
+    }
+
+    .tabs {
+      gap: vwmo(50);
+      .tabsTit {
+        transform: translateY(vwmo(50));
+        font-size: vwmo(38);
+        line-height: vwmo(52);
+        span {
+          font-size: vwmo(24);
+          margin-bottom: vwmo(20);
+        }
+      }
+
+      .tabList {
+        transform: translateY(vwmo(50));
+        gap: vwmo(50);
+
+        button {
+          font-size: vwmo(26);
+          line-height: vwmo(36);
+          padding-bottom: vwmo(20);
+          text-align: left;
+        }
+      }
+
+      .tabArea {
+        transform: translateY(vwmo(50));
+      }
+
+      .tabItem {
+        font-size: vwmo(28);
+        line-height: vwmo(48);
+        &.active {
+          visibility: visible;
+          height: auto;
+        }
+      }
+    }
+  }
+}

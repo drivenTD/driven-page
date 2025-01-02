@@ -1,0 +1,68 @@
+@import "../../../../styles/mixin.scss";
+
+.clientSection {
+  padding: rem(150) 0;
+  position: relative;
+  overflow: hidden;
+
+  .txtBox {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    .tit {
+      font-size: rem(50);
+      line-height: rem(70);
+      font-weight: 700;
+    }
+    .desc {
+      font-size: rem(28);
+      line-height: rem(48);
+      color: $black-color-opacity;
+    }
+  }
+  .clientList {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+@include tablet {
+  .clientSection {
+    padding: vwtb(130) 0;
+
+    .txtBox {
+      gap: vwtb(30);
+      .tit {
+        font-size: vwtb(40);
+        line-height: vwtb(60);
+      }
+      .desc {
+        font-size: vwtb(20);
+        line-height: vwtb(40);
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .clientSection {
+      padding: vwmo(200) 0;
+  
+      .txtBox {
+        gap: vwmo(40);
+        .tit {
+          font-size: vwmo(40);
+          line-height: vwmo(60);
+        }
+        .desc {
+          font-size: vwmo(28);
+          line-height: vwmo(48);
+        }
+      }
+    }
+  }
+  

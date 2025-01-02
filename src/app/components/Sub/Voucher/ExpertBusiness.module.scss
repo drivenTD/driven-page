@@ -1,0 +1,191 @@
+@import "../../../styles/mixin.scss";
+
+.expertSection {
+  padding: rem(150) 0 0;
+  color: $white-color;
+  border-bottom: $grid-line-color;
+  overflow: hidden;
+  .titWrap {
+    span {
+      color: $white-color-opacity;
+      margin-bottom: rem(20);
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    margin-top: rem(50);
+
+    .contItem {
+      position: absolute;
+      bottom: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        width: rem(350);
+      }
+    }
+
+    .expertContBox {
+      width: 100%;
+      height: rem(700);
+      background: url("/image/voucher/expertRound.png") center bottom no-repeat;
+      background-size: rem(812);
+
+      .contList {
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: rem(1200);
+        gap: rem(30);
+        margin: auto;
+        .listGroup {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &:nth-child(1) {
+            width: rem(700);
+          }
+          &:nth-child(2) {
+            width: rem(996);
+          }
+          &:nth-child(3) {
+            width: 100%;
+          }
+        }
+        .listItem {
+          width: rem(150);
+          height: rem(150);
+          font-size: rem(24);
+          font-weight: 700;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='50%25' cy='50%25' r='49%25' fill='none' stroke='white' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+          &.current {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .expertSection {
+    padding: vwtb(150) 0 0;
+    .titWrap {
+      span {
+        margin-bottom: vwtb(30);
+      }
+    }
+
+    .contentBox {
+      margin-top: vwtb(50);
+
+      .contItem {
+        img {
+          width: vwtb(350);
+        }
+      }
+
+      .expertContBox {
+        height: vwtb(670);
+        background-size: vwtb(812);
+
+        .contList {
+          width: 100%;
+          gap: vwtb(30);
+          margin: auto;
+          @include column-padding($col-gap, $col-gap);
+          .listGroup {
+            &:nth-child(1) {
+              width: vwtb(700);
+            }
+            &:nth-child(2) {
+              width: vwtb(996);
+            }
+            &:nth-child(3) {
+              width: 100%;
+            }
+          }
+          .listItem {
+            width: vwtb(150);
+            height: vwtb(150);
+            font-size: vwtb(20);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .expertSection {
+    padding: vwmo(150) 0 0;
+    .titWrap {
+      span {
+        margin-bottom: vwmo(25);
+      }
+    }
+
+    .contentBox {
+      margin-top: vwmo(50);
+
+      .contItem {
+        img {
+          width: vwmo(370);
+        }
+      }
+
+      .expertContBox {
+        height: vwmo(770);
+        background-size: vwmo(812);
+
+        .contList {
+          justify-content: center;
+          align-content: flex-start;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: vwmo(20);
+          margin: auto;
+          width: vwmo(600);
+          padding: 0;
+          padding-top: vwmo(20);
+          .listGroup {
+            gap: vwmo(20);
+            flex-wrap: wrap;
+            &:nth-child(1) {
+              width: auto;
+            }
+            &:nth-child(2) {
+              width: auto;
+            }
+            &:nth-child(3) {
+              width: auto;
+            }
+          }
+          .listItem {
+            padding: vwmo(15) vwmo(20);
+            background: $white-color;
+            color: $black-color;
+            border-radius: vwmo(100);
+            width: auto;
+            height: auto;
+            font-size: vwmo(28);
+            border: 1px solid $black-color;
+            &.current {
+              border: 1px solid $main-color;
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../../../styles/mixin.scss";
+
+.StrategySection {
+  padding: rem(150) 0;
+  position: relative;
+  height: 100%;
+  border-top: 1px solid $grid-line-color;
+  background: $white-color;
+  .wrap {
+    position: relative;
+    z-index: 2;
+  }
+  .titWrap {
+    position: absolute;
+    top: rem(10);
+    .tit {
+      display: inline-block;
+      background: rgb(231, 74, 30);
+      background: linear-gradient(
+        110deg,
+        rgba(231, 74, 30, 1) 20%,
+        rgba(189, 159, 84, 1) 52%,
+        rgba(0, 225, 255, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: rem(50);
+      font-weight: 700;
+    }
+    .desc {
+      margin-top: rem(20);
+      font-size: rem(40);
+      line-height: rem(60);
+    }
+  }
+
+  .strategyList {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: rem(220);
+    .item {
+      position: relative;
+      flex: 0 0 auto;
+
+      .thumb {
+        position: relative;
+        width: 100%;
+        height: vwpc(498);
+        border-radius: vwpc(30);
+        overflow: hidden;
+      }
+      .tit {
+        margin-top: rem(15);
+        font-size: rem(26);
+        font-weight: 700;
+      }
+      .desc {
+        margin-top: rem(15);
+        font-size: rem(18);
+        color: $black-color-opacity;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .StrategySection {
+    padding: vwtb(150) 0;
+    .titWrap {
+      position: absolute;
+      top: vwtb(100);
+      .tit {
+        font-size: vwtb(40);
+      }
+      .desc {
+        margin-top: vwtb(20);
+        font-size: vwtb(32);
+        line-height: vwtb(52);
+      }
+    }
+
+    .strategyList {
+      padding-top: vwtb(320);
+      .item {
+        .thumb {
+          height: vwtb(407);
+          border-radius: vwtb(25);
+        }
+        .tit {
+          margin-top: vwtb(15);
+          font-size: vwtb(24);
+        }
+        .desc {
+          margin-top: vwtb(15);
+          font-size: vwtb(18);
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .StrategySection {
+      padding: vwmo(150) 0;
+      .titWrap {
+        position: static;
+        top: vwmo(0);
+        .tit {
+          font-size: vwmo(40);
+        }
+        .desc {
+          margin-top: vwmo(20);
+          font-size: vwmo(34);
+          line-height: vwmo(54);
+        }
+      }
+  
+      .strategyList {
+        flex-wrap: wrap;
+        transform:translate(0) !important;
+        padding-top: 0;
+        .item {
+          .thumb {
+            height: vwmo(407);
+            border-radius: vwmo(25);
+          }
+          .tit {
+            margin-top: vwmo(15);
+            font-size: vwmo(24);
+          }
+          .desc {
+            margin-top: vwmo(15);
+            font-size: vwmo(18);
+          }
+        }
+      }
+    }
+  }

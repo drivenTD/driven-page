@@ -1,0 +1,189 @@
+@import "../../../styles/mixin.scss";
+
+.caseStudySection {
+  padding: rem(150) 0;
+  background: $black-color url("/image/voucher/serviceBackground.png") center
+    no-repeat;
+  background-size: rem(2921);
+
+  .tabWrap {
+    .localNavi {
+      margin-top: rem(60);
+    }
+  }
+
+  .tabCont {
+    margin-top: rem(60);
+    color: $white-color;
+
+    .tit {
+      font-size: rem(40);
+      line-height: rem(50);
+      font-weight: 700;
+    }
+    .subTit {
+      font-size: rem(24);
+      color: $white-color-opacity;
+      margin-bottom: rem(10);
+    }
+    .listCont {
+      margin-top: rem(50);
+      width: 100%;
+      display: flex;
+      gap: rem(20);
+      h4 {
+        font-size: rem(26);
+        line-height: rem(36);
+        font-weight: 700;
+        margin-bottom: rem(15);
+      }
+      & > li {
+        width: calc(100% / 3);
+        border-radius: rem(20);
+        padding: rem(30);
+        background: $white-color;
+        color: $black-color;
+
+        .keywordList {
+          display: flex;
+          flex-direction: column;
+          font-size: rem(18);
+          line-height: rem(28);
+          li {
+            position: relative;
+            padding-left: rem(13);
+            &::before {
+              display: block;
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: rem(3);
+              height: rem(3);
+              background: $main-color;
+              border-radius: 50%;
+            }
+          }
+        }
+        p {
+          font-size: rem(18);
+          line-height: rem(28);
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .caseStudySection {
+    padding: vwtb(150) 0;
+    background-size: vwtb(1700);
+
+    .tabWrap {
+      .localNavi {
+        margin-top: vwtb(60);
+      }
+    }
+
+    .tabCont {
+      margin-top: vwtb(60);
+
+      .tit {
+        font-size: vwtb(36);
+        line-height: vwtb(46);
+      }
+      .subTit {
+        font-size: vwtb(20);
+        margin-bottom: vwtb(10);
+      }
+      .listCont {
+        margin-top: vwtb(50);
+        gap: vwtb(15);
+        h4 {
+          font-size: vwtb(24);
+          line-height: vwtb(34);
+          margin-bottom: vwtb(15);
+        }
+        & > li {
+          border-radius: vwtb(20);
+          padding: vwtb(30);
+
+          .keywordList {
+            font-size: vwtb(16);
+            line-height: vwtb(26);
+            li {
+              padding-left: vwtb(13);
+              &::before {
+                width: vwtb(3);
+                height: vwtb(3);
+              }
+            }
+          }
+          p {
+            font-size: vwtb(16);
+            line-height: vwtb(26);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .caseStudySection {
+    padding: vwmo(150) 0;
+    background-size: vwmo(2600);
+    background-position: right;
+
+    .tabWrap {
+      .localNavi {
+        margin-top: vwmo(60);
+      }
+    }
+
+    .tabCont {
+      margin-top: vwmo(60);
+
+      .tit {
+        font-size: vwmo(36);
+        line-height: vwmo(46);
+      }
+      .subTit {
+        font-size: vwmo(26);
+        margin-bottom: vwmo(10);
+      }
+      .listCont {
+        flex-direction: column;
+        margin-top: vwmo(50);
+        gap: vwmo(30);
+        h4 {
+          font-size: vwmo(28);
+          line-height: vwmo(38);
+          margin-bottom: vwmo(15);
+        }
+        & > li {
+          width: 100%;
+          border-radius: vwmo(20);
+          padding: vwmo(30);
+
+          .keywordList {
+            font-size: vwmo(26);
+            line-height: vwmo(36);
+            li {
+              padding-left: vwmo(16);
+              &::before {
+                width: vwmo(6);
+                height: vwmo(6);
+              }
+            }
+          }
+          p {
+            font-size: vwmo(26);
+            line-height: vwmo(36);
+          }
+        }
+      }
+    }
+  }
+}

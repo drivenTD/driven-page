@@ -1,0 +1,204 @@
+@import "../../../styles/mixin.scss";
+
+.flowListSection {
+  padding: rem(100) 0;
+  border-top: 1px solid $grid-line-color;
+  overflow:hidden;
+
+  .titWrap {
+    span {
+      color: $black-color-opacity;
+      margin-bottom: rem(20);
+    }
+  }
+  .flowBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flowList {
+    margin-top: rem(50);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .itemWrap {
+      flex: 0 0 auto;
+    }
+
+    .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+      height: rem(320);
+      padding: rem(30);
+      background: $white-color;
+      border-radius: rem(20);
+      .num {
+        span {
+          display: inline-block;
+          padding: rem(10) rem(20);
+          font-size: rem(26);
+          border-radius: rem(10);
+          color: $white-color;
+          background: $main-color;
+        }
+      }
+      .tit {
+        font-size: rem(30);
+        font-weight: 600;
+      }
+      .desc {
+        font-size: rem(18);
+        line-height: rem(28);
+      }
+    }
+  }
+  .btnWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(30);
+    margin-top: rem(30);
+    a {
+      width: rem(550);
+      padding: rem(40) 0;
+      font-size: rem(24);
+      border-radius: rem(20);
+      background: $white-color;
+      color: $black-color;
+      border: 1px solid $grid-line-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(15);
+      &:first-child {
+        background: $main-color;
+        color: $white-color;
+        border-color: $main-color;
+        svg {
+          path {
+            fill: $white-color;
+          }
+        }
+      }
+      svg {
+        width: rem(25);
+        path {
+          fill: $black-color;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .flowListSection {
+    padding: vwtb(200) 0;
+
+    .titWrap {
+      span {
+        margin-bottom: vwtb(20);
+      }
+    }
+
+    .flowList {
+      margin-top: vwtb(50);
+
+      .item {
+        gap: vwtb(20);
+        height: vwtb(320);
+        padding: vwtb(30);
+        border-radius: vwtb(20);
+        .num {
+          span {
+            padding: vwtb(8) vwtb(15);
+            font-size: vwtb(26);
+            border-radius: vwtb(10);
+          }
+        }
+        .tit {
+          font-size: vwtb(26);
+        }
+        .desc {
+          font-size: vwtb(16);
+          line-height: vwtb(26);
+        }
+      }
+    }
+    .btnWrap {
+      gap: vwtb(30);
+      margin-top: vwtb(30);
+      a {
+        width: vwtb(470);
+        padding: vwtb(30) 0;
+        font-size: vwtb(24);
+        border-radius: vwtb(20);
+        gap: vwtb(15);
+        svg {
+          width: vwtb(25);
+        }
+      }
+    }
+  }
+  
+}
+
+@include mobile {
+  .flowListSection {
+    padding: vwmo(150) 0;
+
+    .titWrap {
+      span {
+        margin-bottom: vwmo(20);
+      }
+    }
+    .flowList {
+      margin-top: vwmo(80);
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: start;
+
+      .itemWrap {
+        flex: 0 0 auto;
+      }
+
+      .item {
+        gap: vwmo(30);
+        height: auto;
+        padding: vwmo(30);
+        border-radius: vwmo(20);
+        .num {
+          span {
+            padding: vwmo(10) vwmo(18);
+            font-size: vwmo(30);
+            border-radius: vwmo(10);
+          }
+        }
+        .tit {
+          font-size: vwmo(30);
+        }
+        .desc {
+          font-size: vwmo(24);
+          line-height: vwmo(34);
+        }
+      }
+    }
+    .btnWrap {
+      gap: vwmo(30);
+      margin-top: vwmo(30);
+      a {
+        width: vwmo(470);
+        padding: vwmo(40) 0;
+        font-size: vwmo(26);
+        border-radius: vwmo(20);
+        gap: vwmo(15);
+        svg {
+          width: vwmo(30);
+        }
+      }
+    }
+  }
+}

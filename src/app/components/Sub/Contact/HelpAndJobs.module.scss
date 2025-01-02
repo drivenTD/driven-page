@@ -1,0 +1,167 @@
+@import "../../../styles/mixin.scss";
+
+.helpSection {
+  padding: rem(150) 0;
+  border-top: 1px solid $grid-line-color;
+
+  .helpBox {
+    display: flex;
+    gap: rem(50);
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: rem(20);
+      flex: 0 0 auto;
+      width: calc(100% / 2 - rem(25));
+      height: rem(400);
+      border-radius: rem(30);
+      color: $white-color;
+      overflow: hidden;
+      position: relative;
+      .backgroundVideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        video {
+          width: rem(1000);
+        }
+        &::before {
+          content: "";
+          display: block;
+          background: rgba(0, 0, 0, 0.4);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+      }
+
+      .tit {
+        font-size: rem(40);
+        font-weight: 700;
+      }
+      .desc {
+        font-size: rem(24);
+      }
+      a {
+        width: rem(212);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: rem(18);
+        font-weight: 400;
+        padding: rem(10) rem(25);
+        background: $black-color;
+        color: $white-color;
+        border-radius: rem(50);
+
+        svg {
+          width: rem(26);
+          circle {
+            fill: $main-color;
+          }
+          path {
+            fill: $white-color;
+          }
+        }
+      }
+
+      &:first-child {
+        background: #000 url("/image/sub/contact/question_bg.jpg") no-repeat
+          center center;
+        background-size: cover;
+      }
+      &:last-child {
+        background: #000 url("/image/sub/contact/recruit_bg.jpg") no-repeat
+          center center;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .helpSection {
+    padding: vwtb(120) 0;
+
+    .helpBox {
+      flex-direction: column;
+      gap: vwtb(50);
+      .item {
+        gap: vwtb(20);
+        width: 100%;
+        height: vwtb(350);
+        border-radius: vwtb(30);
+        .backgroundVideo {
+          video {
+            width: vwtb(1280);
+          }
+        }
+
+        .tit {
+          font-size: vwtb(38);
+        }
+        .desc {
+          font-size: vwtb(20);
+        }
+        a {
+          width: vwtb(212);
+          font-size: vwtb(16);
+          padding: vwtb(10) vwtb(25);
+          border-radius: vwtb(50);
+
+          svg {
+            width: vwtb(26);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .helpSection {
+      padding: vwmo(100) 0;
+  
+      .helpBox {
+        flex-direction: column;
+        gap: vwmo(30);
+        .item {
+          gap: vwmo(20);
+          width: 100%;
+          height: vwmo(350);
+          border-radius: vwmo(30);
+          .backgroundVideo {
+            video {
+              width: vwmo(768);
+            }
+          }
+  
+          .tit {
+            font-size: vwmo(38);
+          }
+          .desc {
+            font-size: vwmo(20);
+          }
+          a {
+            width: vwmo(212);
+            font-size: vwmo(16);
+            padding: vwmo(10) vwmo(25);
+            border-radius: vwmo(50);
+  
+            svg {
+              width: vwmo(28);
+            }
+          }
+        }
+      }
+    }
+  }

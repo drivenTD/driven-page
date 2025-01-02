@@ -1,0 +1,66 @@
+@import '../../../../styles/mixin.scss';
+
+.readSection{
+    width:100%;
+    position:relative;
+    padding: rem(200) 0 rem(200);
+    color: $black-color;
+
+    .readTxt{
+        position:relative;
+        z-index:2;
+        h3{
+            width: 100%;
+            font-size: vwpc(40);
+            line-height: vwpc(70);
+            display:flex;
+            flex-direction: column;
+            gap:vwpc(80);
+            
+            .wordBox{
+                display:flex;
+                flex-wrap: wrap;
+                gap:vwpc(10);
+            }
+        }
+    }
+}
+
+
+
+@include tablet{
+    .readSection{
+        padding: vwtb(100) 0 vwtb(100);
+    
+        .readTxt{
+            h3{
+                font-size: vwtb(36);
+                line-height: vwtb(56);
+                gap:vwtb(70);
+                
+                .wordBox{
+                    gap:vwtb(10);
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile{
+    .readSection{
+        padding: vwmo(180) 0 vwmo(180);
+    
+        .readTxt{
+            h3{
+                font-size: vwmo(36);
+                line-height: vwmo(64);
+                gap:vwmo(80);
+                
+                .wordBox{
+                    gap:vwmo(10);
+                }
+            }
+        }
+    }
+}

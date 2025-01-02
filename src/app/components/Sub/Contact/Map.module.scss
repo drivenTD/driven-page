@@ -1,0 +1,136 @@
+@import "../../../styles/mixin.scss";
+
+.mapSection {
+  position: relative;
+  padding: rem(120) 0;
+  overflow: hidden;
+  border-top: 1px solid $grid-line-color;
+  .map {
+    width: 100%;
+    height: rem(620);
+    border-radius: rem(20);
+    border: 1px solid $grid-line-color;
+  }
+  .adressWrap {
+    display: flex;
+    margin-top: rem(80);
+    .infoWrap{
+        display:flex;
+    }
+    .mapInfotxt {
+      .tit {
+        font-size: rem(24);
+        font-weight: 600;
+        margin-bottom: rem(15);
+        color: $main-color;
+      }
+      .desc {
+        font-size: rem(20);
+        line-height: rem(30);
+        * {
+          color: $black-color;
+        }
+      }
+    }
+
+    .buttonsWrap {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+      a {
+        mix-blend-mode: normal;
+        color: $black-color;
+        svg {
+          circle {
+            fill: $black-color;
+          }
+          path {
+            fill: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .mapSection {
+    padding: vwtb(120) 0;
+
+    .map {
+      height: vwtb(620);
+      border-radius: vwtb(20);
+    }
+
+    .adressWrap {
+      flex-wrap: wrap;
+      margin-top: vwtb(80);
+      .mapInfotxt {
+        .tit {
+          font-size: vwtb(24);
+          font-weight: 600;
+          margin-bottom: vwtb(15);
+          color: $main-color;
+        }
+        .desc {
+          font-size: vwtb(20);
+          line-height: vwtb(30);
+          * {
+            color: $black-color;
+          }
+        }
+      }
+
+      .buttonsWrap {
+        display: flex;
+        flex-direction: row;
+        margin-top: rem(20);
+        gap: vwtb(0);
+        a {
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include mobile {
+    .mapSection {
+      padding: vwmo(120) 0;
+  
+      .map {
+        height: vwmo(440);
+        border-radius: vwmo(20);
+      }
+  
+      .adressWrap {
+        flex-wrap: nowrap;
+        margin-top: vwmo(30);
+        .infoWrap{
+            display:flex;
+            flex-direction: column;
+        }
+        .mapInfotxt {
+          .tit {
+            font-size: vwmo(28);
+            margin-bottom: vwmo(15);
+          }
+          .desc {
+            font-size: vwmo(26);
+            line-height: vwmo(36);
+          }
+        }
+  
+        .buttonsWrap {
+          margin-top: rem(0);
+          gap: vwmo(20);
+          a {
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+  

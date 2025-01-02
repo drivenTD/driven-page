@@ -1,0 +1,51 @@
+.readSection {
+  width: 100%;
+  position: relative;
+  padding: 18.75rem 0 18.75rem;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.readSection .readTxt {
+  position: relative;
+  z-index: 2;
+}
+.readSection .readTxt h3 {
+  width: 100%;
+  font-size: 4.375rem;
+  line-height: 8.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+.readSection .readTxt h3 .wordBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .readSection {
+    padding: calc(200 / 1280 * 100vw) 0 calc(200 / 1280 * 100vw);
+  }
+  .readSection .readTxt h3 {
+    font-size: calc(50 / 1280 * 100vw);
+    line-height: calc(90 / 1280 * 100vw);
+    gap: calc(120 / 1280 * 100vw);
+  }
+  .readSection .readTxt h3 .wordBox {
+    gap: calc(10 / 1280 * 100vw);
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .readSection {
+    padding: calc(200 / 768 * 100vw) 0 calc(200 / 768 * 100vw);
+  }
+  .readSection .readTxt h3 {
+    font-size: calc(48 / 768 * 100vw);
+    line-height: calc(80 / 768 * 100vw);
+    gap: calc(80 / 768 * 100vw);
+  }
+  .readSection .readTxt h3 .wordBox {
+    gap: calc(10 / 768 * 100vw);
+  }
+}

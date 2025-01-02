@@ -1,0 +1,167 @@
+@import "../../../styles/mixin.scss";
+
+.mediaSection {
+  position: relative;
+  z-index: 701;
+  padding: rem(150) 0;
+  border-top: 1px solid $grid-line-color;
+  color: $white-color;
+  background: $black-color;
+  .titWrap {
+    span {
+      color: $white-color-opacity;
+      margin-bottom: rem(20);
+    }
+  }
+
+  .mediaListWrap {
+    margin-top: rem(50);
+    .mediaList {
+      display: flex;
+      gap: rem(30);
+      .item {
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        gap: vwpc(50);
+        border-radius: rem(20);
+        background: rgba(255, 255, 255, 0.8);
+        padding: vwpc(30);
+        color: $black-color;
+        .listTit {
+          text-align: center;
+          font-size: rem(26);
+          line-height: rem(36);
+          font-weight: 600;
+          span {
+            font-size: rem(18);
+            font-weight: 400;
+            display: block;
+          }
+        }
+
+        .mediaLogoList {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: vwpc(10);
+          .round {
+            img {
+              width: vwpc(65);
+            }
+          }
+          .default {
+            img {
+              width: vwpc(200);
+            }
+          }
+        }
+        .listDesc {
+          font-size: rem(18);
+          line-height: rem(28);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .mediaSection {
+    padding: vwtb(150) 0;
+    .titWrap {
+      span {
+        margin-bottom: vwtb(30);
+      }
+    }
+
+    .mediaListWrap {
+      margin-top: vwtb(50);
+      .mediaList {
+        gap: vwtb(30);
+        .item {
+          justify-content: space-between;
+          gap: vwtb(50);
+          border-radius: vwtb(20);
+          padding: vwtb(30);
+          .listTit {
+            font-size: vwtb(24);
+            line-height: vwtb(34);
+            span {
+              font-size: vwtb(16);
+            }
+          }
+
+          .mediaLogoList {
+            gap: vwtb(10);
+            .round {
+              img {
+                width: vwtb(65);
+              }
+            }
+            .default {
+              img {
+                width: vwtb(200);
+              }
+            }
+          }
+          .listDesc {
+            font-size: vwtb(16);
+            line-height: vwtb(26);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .mediaSection {
+    padding: vwmo(140) 0;
+    .titWrap {
+      span {
+        margin-bottom: vwmo(25);
+      }
+    }
+
+    .mediaListWrap {
+      margin-top: vwmo(50);
+      .mediaList {
+        flex-direction: column;
+        gap: vwmo(30);
+        .item {
+          width: 100%;
+          gap: vwmo(50);
+          border-radius: vwmo(20);
+          padding: vwmo(30);
+          .listTit {
+            font-size: vwmo(32);
+            line-height: vwmo(42);
+            span {
+              font-size: vwmo(26);
+            }
+          }
+
+          .mediaLogoList {
+            gap: vwmo(10);
+            .round {
+              img {
+                width: vwmo(65);
+              }
+            }
+            .default {
+              img {
+                width: vwmo(200);
+              }
+            }
+          }
+          .listDesc {
+            font-size: vwmo(26);
+            line-height: vwmo(36);
+          }
+        }
+      }
+    }
+  }
+}

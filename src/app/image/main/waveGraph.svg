@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 1919 1020" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g style="mix-blend-mode:hard-light" opacity="0.5">
+    <path id="wave-path" d="M1920 1020H0L32.8485 814.344C49.2728 771.556 91.9762 728.769 136.322 723.248C197.092 716.346 218.443 748.092 256.219 732.909C293.995 717.727 287.425 663.897 333.413 632.152C371.189 604.547 412.25 625.25 464.808 614.208C594.56 585.223 607.699 451.34 661.899 452.72C725.954 454.1 712.814 524.493 781.796 525.873C822.857 527.253 862.276 322.977 934.542 305.034C1028.16 282.95 1059.37 389.229 1175.98 378.187C1286.02 368.525 1320.51 169.77 1410.85 179.432C1471.62 186.333 1484.76 247.064 1530.74 244.303C1604.65 238.782 1541.5 102 1690.5 92.5C1839.5 83 1814 0 1920 0V1020Z" fill="url(#paint0_linear_205_227)"/>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_205_227" x1="562.5" y1="823.5" x2="521.635" y2="240.695" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#01878C" stop-opacity="0.05"/>
+      <stop offset="0.333333" stop-color="#00E1FF" stop-opacity="0.2"/>
+      <stop offset="0.71" stop-color="#00FFFB" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#02FFF7"/>
+    </linearGradient>
+  </defs>
+</svg>

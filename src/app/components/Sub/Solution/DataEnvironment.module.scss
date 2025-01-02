@@ -1,0 +1,137 @@
+@import "../../../styles/mixin.scss";
+.environmentSection {
+  padding: rem(150) 0;
+  //   background: url("/image/solution/environmentSection.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  .backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    video {
+      width: rem(2800);
+    }
+    &::before {
+      content: "";
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .dataLists {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      .itemWrap {
+        background-color: #171d22;
+        display: flex;
+        flex-direction: column;
+        gap: vwpc(50);
+        padding: vwpc(50);
+        height: vwpc(400);
+      }
+      .headCont {
+        display: flex;
+        flex-direction: column;
+        gap: vwpc(10);
+        p {
+          color: $main-color;
+          font-size: vwpc(28);
+          line-height: vwpc(38);
+          font-weight: 700;
+        }
+        span {
+          font-size: vwpc(18);
+          color: $white-color;
+          display: block;
+          text-align: right;
+        }
+      }
+      .bodyCont {
+        font-size: vwpc(18);
+        line-height: vwpc(28);
+        color: $white-color;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .environmentSection {
+    padding: vwtb(150) 0;
+
+    .backgroundVideo {
+      video {
+        width: vwtb(2800);
+      }
+    }
+    .dataLists {
+      .item {
+        .itemWrap {
+          gap: vwtb(50);
+          padding: vwtb(40) vwtb(30);
+          height: vwtb(400);
+        }
+        .headCont {
+          gap: vwtb(10);
+          p {
+            font-size: vwtb(28);
+            line-height: vwtb(38);
+          }
+          span {
+            font-size: vwtb(18);
+          }
+        }
+        .bodyCont {
+          font-size: vwtb(18);
+          line-height: vwtb(28);
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .environmentSection {
+      padding: vwmo(150) 0;
+  
+      .backgroundVideo {
+        video {
+          width: vwmo(5000);
+        }
+      }
+      .dataLists {
+        .item {
+          .itemWrap {
+            gap: vwmo(50);
+            padding: vwmo(40) vwmo(30);
+            height: vwmo(400);
+          }
+          .headCont {
+            gap: vwmo(10);
+            p {
+              font-size: vwmo(30);
+              line-height: vwmo(38);
+            }
+            span {
+              font-size: vwmo(24);
+            }
+          }
+          .bodyCont {
+            font-size: vwmo(26);
+            line-height: vwmo(36);
+          }
+        }
+      }
+    }
+  }
+  

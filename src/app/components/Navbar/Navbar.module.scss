@@ -1,0 +1,55 @@
+@import '../../styles/mixin.scss';
+
+.navbar {
+  height:100%;
+  .menu {
+    height:100%;
+    display: flex;
+    gap: rem(40);
+    & > li {
+      display:flex;
+      align-items: center;
+      position:relative;
+      &:hover{
+        .dropMenu{
+          opacity:1;
+          visibility: visible;
+          transition: opacity .3s;
+        }
+      }
+      & > a {
+        font-size: rem(18);
+        font-weight: 500;
+        color: $white-color;
+      }
+    }
+  }
+
+  .dropMenu{
+    width:calc(100% + rem(50));
+    opacity:0;
+    visibility: hidden;
+    position:absolute;
+    top:calc(100% + 1px);
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    gap:rem(15);
+    padding:rem(15);
+    border-radius:rem(10);
+    background:$black-color;
+
+    a {
+      font-size: rem(16);
+      font-weight: 500;
+      color: $white-color;
+    }
+  }
+}
+
+@include mobileTablet{
+  .navbar{
+    display:none;
+  }
+}

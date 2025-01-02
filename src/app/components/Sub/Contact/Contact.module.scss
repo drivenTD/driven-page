@@ -1,0 +1,547 @@
+@import "../../../styles/mixin.scss";
+
+.contactSection {
+  padding: rem(150) 0;
+  overflow: hidden;
+
+  .flexBox {
+    display: flex;
+    gap: rem(40);
+    .formGroup {
+      width: calc(100% / 2 - rem(20));
+      flex: 0 0 auto;
+
+      .formInput {
+        width: 100%;
+      }
+    }
+  }
+
+  .formGroup {
+    margin-bottom: rem(40);
+    .formInput {
+      width: 100%;
+      font-size: rem(20);
+      line-height: rem(66);
+      background: none;
+      border: 0;
+      border-bottom: 1px solid $black-color-opacity;
+      color: #000;
+      &::placeholder {
+        color: $black-color-opacity;
+      }
+      &:disabled {
+        opacity: 0.3;
+      }
+    }
+
+    .textarea {
+      width: 100%;
+      height: rem(320);
+      font-size: rem(20);
+      line-height: rem(36);
+      padding: rem(30);
+      background: none;
+      border: 1px solid $black-color-opacity;
+      color: #000;
+      &::placeholder {
+        color: $black-color-opacity;
+      }
+    }
+
+    &.personalGroup {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"]:checked + svg path {
+        fill: $main-color;
+      }
+      svg {
+        width: rem(28);
+        height: rem(28);
+      }
+      label {
+        cursor: pointer;
+        display: flex;
+        gap: rem(10);
+        align-items: center;
+        color: $black-color-opacity;
+        font-size: rem(20);
+        line-height: rem(36);
+      }
+      button {
+        font-size: rem(20);
+        padding: 0;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid $black-color;
+        color: $black-color;
+      }
+    }
+  }
+
+  .checkedGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+    input[type="checkbox"],
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
+      background: $main-color;
+      color: $white-color;
+      border: 1px solid transparent;
+    }
+
+    label {
+      height: rem(56);
+      font-size: rem(20);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 rem(30);
+      border: 1px solid #848484;
+      border-radius: rem(100);
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .inputText {
+      width: rem(410);
+      line-height: rem(56);
+    }
+  }
+}
+
+.formContainer {
+  margin-top: rem(150);
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+  }
+  .txtWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(20);
+    .tit {
+      font-size: rem(25);
+      font-weight: 700;
+    }
+    .essentialBox {
+      font-size: rem(16);
+      .essential {
+        margin-right: rem(5);
+      }
+    }
+    .essential {
+      display: inline-block;
+      color: $main-color;
+    }
+    .checkedEx {
+      display: inline-block;
+      font-size: rem(16);
+      font-weight: normal;
+      margin-left: rem(15);
+      color: $black-color-opacity;
+    }
+  }
+}
+
+.submitBox {
+  text-align: center;
+  .submitButton {
+    width: rem(170);
+    height: rem(170);
+    font-size: rem(20);
+    font-weight: 700;
+    border: 0;
+    background: $main-color;
+    border-radius: 100%;
+    color: $white-color;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.personalPopup {
+  display: none;
+  position: relative;
+  .popupContianer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: rem(20);
+    width: rem(570);
+    height: auto;
+    z-index: 901;
+    background: #fff;
+    .head {
+      width: 100%;
+      height: rem(70);
+      padding: 0 rem(20);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $grid-line-color;
+      .tit {
+        font-size: rem(24);
+        font-weight: 700;
+      }
+      button {
+        background: none;
+        border: 0;
+        svg {
+          width: rem(24);
+          height: rem(24);
+        }
+      }
+    }
+    .body {
+      padding: rem(30) rem(20);
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        li {
+          position: relative;
+          padding-left: rem(13);
+          display: flex;
+          flex-direction: column;
+          gap: rem(10);
+          span {
+            position: relative;
+            display: block;
+            font-size: rem(20);
+            font-weight: 700;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: rem(-13);
+              top: 50%;
+              transform: translateY(-50%);
+              width: rem(3);
+              height: rem(3);
+              border-radius: 100%;
+              background: $main-color;
+            }
+          }
+          p {
+            font-size: rem(18);
+            line-height: rem(28);
+          }
+        }
+      }
+    }
+  }
+  &::before {
+    z-index: 900;
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &.active {
+    display: block;
+  }
+}
+
+@include tablet {
+  .contactSection {
+    padding: vwtb(150) 0;
+
+    .flexBox {
+      gap: vwtb(40);
+      .formGroup {
+        width: calc(100% / 2 - vwtb(20));
+        flex: 0 0 auto;
+
+        .formInput {
+          width: 100%;
+        }
+      }
+    }
+
+    .formGroup {
+      margin-bottom: vwtb(40);
+      .formInput {
+        font-size: vwtb(18);
+        line-height: vwtb(66);
+      }
+
+      .textarea {
+        width: 100%;
+        height: vwtb(380);
+        font-size: vwtb(18);
+        line-height: vwtb(34);
+        padding: vwtb(20) vwtb(25);
+      }
+
+      &.personalGroup {
+        gap: vwtb(15);
+        svg {
+          width: vwtb(26);
+          height: vwtb(26);
+        }
+        label {
+          gap: vwtb(10);
+          font-size: vwtb(18);
+          line-height: vwtb(34);
+        }
+        button {
+          font-size: vwtb(18);
+        }
+      }
+    }
+
+    .checkedGroup {
+      gap: vwtb(10);
+
+      label {
+        height: vwtb(53);
+        font-size: vwtb(18);
+        padding: 0 vwtb(30);
+        border-radius: vwtb(100);
+      }
+
+      .inputText {
+        width: vwtb(410);
+        line-height: vwtb(53);
+      }
+    }
+  }
+
+  .formContainer {
+    margin-top: vwtb(150);
+    form {
+      gap: vwtb(40);
+    }
+    .txtWrap {
+      margin-bottom: vwtb(20);
+      .tit {
+        font-size: vwtb(25);
+      }
+      .essentialBox {
+        font-size: vwtb(16);
+        .essential {
+          margin-right: vwtb(5);
+        }
+      }
+      .checkedEx {
+        font-size: vwtb(16);
+        margin-left: vwtb(10);
+      }
+    }
+  }
+
+  .submitBox {
+    .submitButton {
+      width: vwtb(170);
+      height: vwtb(170);
+      font-size: vwtb(20);
+    }
+  }
+
+  .personalPopup {
+    .popupContianer {
+      width: vwtb(630);
+      .head {
+        height: vwtb(70);
+        padding: 0 vwtb(20);
+        .tit {
+          font-size: vwtb(20);
+        }
+        button {
+          svg {
+            width: vwtb(24);
+            height: vwtb(24);
+          }
+        }
+      }
+      .body {
+        padding: vwtb(30) vwtb(20);
+        ul {
+          gap: vwtb(20);
+          li {
+            padding-left: vwtb(13);
+            gap: vwtb(10);
+            span {
+              font-size: vwtb(18);
+              &::before {
+                left: vwtb(-13);
+                width: vwtb(3);
+                height: vwtb(3);
+              }
+            }
+            p {
+              font-size: vwtb(16);
+              line-height: vwtb(26);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .contactSection {
+    padding: vwmo(120) 0;
+
+    .flexBox {
+      gap: vwmo(0);
+      flex-wrap:wrap;
+      .formGroup {
+        width: 100%;
+
+        .formInput {
+          width: 100%;
+        }
+      }
+    }
+
+    .formGroup {
+      margin-bottom: vwmo(40);
+      .formInput {
+        font-size: vwmo(28);
+        line-height: vwmo(66);
+      }
+
+      .textarea {
+        width: 100%;
+        height: vwmo(380);
+        font-size: vwmo(28);
+        line-height: vwmo(50);
+        padding: vwmo(20);
+      }
+
+      &.personalGroup {
+        gap: vwmo(10);
+        svg {
+          width: vwmo(30);
+          height: vwmo(30);
+        }
+        label {
+          gap: vwmo(15);
+          font-size: vwmo(26);
+          line-height: vwmo(36);
+        }
+        button {
+          font-size: vwmo(26);
+        }
+      }
+    }
+
+    .checkedGroup {
+      gap: vwmo(15);
+
+      label {
+        height: vwmo(63);
+        font-size: vwmo(28);
+        padding: 0 vwmo(32);
+        border-radius: vwmo(100);
+      }
+
+      .inputText {
+        width: vwmo(410);
+        line-height: vwmo(63);
+      }
+    }
+  }
+
+  .formContainer {
+    margin-top: vwmo(100);
+    form {
+      gap: vwmo(30);
+    }
+    .txtWrap {
+      margin-bottom: vwmo(30);
+      .tit {
+        font-size: vwmo(32);
+      }
+      .essentialBox {
+        font-size: vwmo(26);
+        .essential {
+          margin-right: vwmo(5);
+        }
+      }
+      .checkedEx {
+        font-size: vwmo(26);
+        margin-left: vwmo(10);
+      }
+    }
+  }
+
+  .submitBox {
+    .submitButton {
+      width: vwmo(260);
+      height: vwmo(260);
+      font-size: vwmo(30);
+    }
+  }
+
+  .personalPopup {
+    .popupContianer {
+      width: vwmo(630);
+      border-radius:vwmo(20);
+      .head {
+        height: vwmo(80);
+        padding: 0 vwmo(20);
+        .tit {
+          font-size: vwmo(30);
+        }
+        button {
+          svg {
+            width: vwmo(40);
+            height: vwmo(40);
+          }
+        }
+      }
+      .body {
+        padding: vwmo(30) vwmo(20);
+        ul {
+          gap: vwmo(30);
+          li {
+            padding-left: vwmo(15);
+            gap: vwmo(20);
+            span {
+              font-size: vwmo(28);
+              &::before {
+                left: vwmo(-15);
+                width: vwmo(5);
+                height: vwmo(5);
+              }
+            }
+            p {
+              font-size: vwmo(26);
+              line-height: vwmo(36);
+            }
+          }
+        }
+      }
+    }
+  }
+}

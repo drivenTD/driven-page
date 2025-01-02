@@ -1,0 +1,26 @@
+<div class="svg-container">
+  <svg
+    class="responsive-svg"
+    viewBox="0 0 365 432"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      class="line-1"
+      x1="364.382"
+      y1="0.322095"
+      x2="1.38246"
+      y2="431.322"
+      stroke="#9FA1A3"
+      stroke-opacity="0.225"
+    />
+    <line
+      class="line-2"
+      y1="-0.5"
+      x2="563.498"
+      y2="-0.5"
+      stroke="#9FA1A3"
+      stroke-opacity="0.225"
+    />
+  </svg>
+</div>

@@ -1,0 +1,73 @@
+@import "../../../styles/mixin.scss";
+
+.solutionAboutSection {
+  padding: rem(150) 0;
+
+  .bgAreaWrap {
+    .bgArea {
+      height: rem(390);
+      border-radius: rem(20);
+      overflow: hidden;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: $white-color;
+      font-size: rem(40);
+      line-height: rem(60);
+      font-weight: 700;
+      &.datamon {
+        background: url("/image/solution/datamonVisual.jpg") center no-repeat;
+      }
+      &.solution {
+        background: url("/image/solution/solutionVisual.jpg") center no-repeat;
+      }
+    }
+    .bottomTxt {
+      font-size: rem(30);
+      line-height: rem(50);
+      margin-top: rem(50);
+    }
+  }
+}
+
+@include tablet{
+  .solutionAboutSection {
+    padding: vwtb(150) 0;
+  
+    .bgAreaWrap {
+      .bgArea {
+        height: vwtb(275);
+        border-radius: vwtb(20);
+        font-size: vwtb(34);
+        line-height: vwtb(44);
+      }
+      .bottomTxt {
+        font-size: vwtb(24);
+        line-height: vwtb(34);
+        margin-top: vwtb(50);
+      }
+    }
+  }
+}
+
+@include mobile{
+  .solutionAboutSection {
+    padding: vwmo(150) 0;
+  
+    .bgAreaWrap {
+      .bgArea {
+        height: vwmo(275);
+        border-radius: vwmo(20);
+        font-size: vwmo(36);
+        line-height: vwmo(46);
+      }
+      .bottomTxt {
+        font-size: vwmo(26);
+        line-height: vwmo(36);
+        margin-top: vwmo(37);
+      }
+    }
+  }
+}

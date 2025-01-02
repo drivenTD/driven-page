@@ -1,0 +1,69 @@
+@import "../../styles/mixin.scss";
+
+.marqueeSection {
+  position: relative;
+  overflow: hidden; // 화면 밖으로 나가는 요소를 숨김
+  color: $white-color;
+  padding: rem(200) 0;
+  z-index: 2;
+
+  .marqueeLists {
+    display: flex;
+    gap: rem(30); // 항목 간 간격
+    animation: marquee 60s linear infinite; // 끊김 없는 애니메이션
+    white-space: nowrap; // 텍스트 줄바꿈 방지
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    font-size: rem(100);
+    font-weight: bold;
+    &::after {
+      display: block;
+      content: "·";
+    }
+  }
+
+  // 마퀴 애니메이션
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); // 시작 위치
+    }
+    100% {
+      transform: translateX(-400%); // 끝 위치
+    }
+  }
+}
+
+@include tablet {
+  .marqueeSection {
+    padding: vwtb(150) 0;
+
+    .marqueeLists {
+      gap: vwtb(20);
+    }
+
+    .item {
+      gap: vwtb(20);
+      font-size: vwtb(70);
+    }
+  }
+}
+
+@include mobile {
+    .marqueeSection {
+      padding: vwmo(150) 0;
+  
+      .marqueeLists {
+        gap: vwmo(20);
+      }
+  
+      .item {
+        gap: vwmo(20);
+        font-size: vwmo(70);
+      }
+    }
+  }
+  

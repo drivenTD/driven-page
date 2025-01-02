@@ -1,0 +1,203 @@
+@import "../../../styles/mixin.scss";
+
+.accordionSection {
+  padding: rem(200) 0;
+  position: relative;
+  overflow: hidden;
+  .accordionListWrap {
+    margin-top: rem(80);
+    .accordionList {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .item {
+        background-size: cover;
+        transition: all 0.5s ease;
+        height: rem(750);
+        position: relative;
+        overflow: hidden;
+        background-size: cover !important;
+        .coverTit {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(90deg);
+          font-size: rem(40);
+          color: #fff;
+          font-weight: 700;
+          letter-spacing: rem(5);
+          white-space: nowrap;
+        }
+        .txtWrap {
+          position: absolute;
+          top: rem(50);
+          text-align: center;
+          color: $white-color;
+          white-space: nowrap;
+          opacity: 0;
+          visibility: hidden;
+
+          .tit {
+            font-size: rem(60);
+            line-height: rem(80);
+            font-weight: 700;
+          }
+          .desc {
+            font-size: rem(26);
+            line-height: rem(46);
+          }
+        }
+
+        &:nth-child(1) {
+          background: url("/image/solution/accordionList1.jpg") center no-repeat;
+          border-radius: rem(30) 0 0 rem(30);
+        }
+
+        &:nth-child(2) {
+          background: url("/image/solution/accordionList2.jpg") center no-repeat;
+        }
+
+        &:nth-child(3) {
+          background: url("/image/solution/accordionList3.jpg") center no-repeat;
+          border-radius: 0 rem(30) rem(30) 0;
+        }
+
+        &.action {
+          flex: 1 !important;
+          .coverTit {
+            opacity: 0;
+            visibility: hidden;
+          }
+          .txtWrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(0) translate(-50%, -50%);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:not(:hover) {
+          flex: 0 1 10%;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .accordionSection {
+    padding: vwtb(200) 0;
+    .accordionListWrap {
+      margin-top: vwtb(80);
+      .accordionList {
+        .item {
+          height: vwtb(850);
+          .coverTit {
+            font-size: vwtb(34);
+            letter-spacing: vwtb(5);
+          }
+          .txtWrap {
+            .tit {
+              font-size: vwtb(50);
+              line-height: vwtb(60);
+            }
+            .desc {
+              font-size: vwtb(24);
+              line-height: vwtb(34);
+            }
+          }
+
+          &:nth-child(1) {
+            border-radius: vwtb(30) 0 0 vwtb(30);
+          }
+
+          &:nth-child(3) {
+            border-radius: 0 vwtb(30) vwtb(30) 0;
+          }
+
+          &.action {
+            flex: 1 !important;
+          }
+
+          &:not(:hover) {
+            flex: 0 1 10%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .accordionSection {
+    padding: vwmo(150) 0;
+    border-top: 1px solid $grid-line-color;
+    .accordionListWrap {
+      margin-top: vwmo(80);
+      .accordionList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: vwmo(880);
+        gap: vwmo(20);
+        .item {
+          flex: 1;
+          width: 100%;
+          height: vwmo(280);
+
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+          }
+          .coverTit {
+            display: none;
+          }
+          .txtWrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            visibility: visible;
+
+            .tit {
+              font-size: vwmo(36);
+              line-height: vwmo(46);
+            }
+            .desc {
+              margin-top: vwmo(20);
+              font-size: vwmo(26);
+              line-height: vwmo(46);
+            }
+          }
+
+          &:nth-child(1) {
+            border-radius: vwmo(30);
+          }
+
+          &:nth-child(2) {
+            border-radius: vwmo(30);
+          }
+
+          &:nth-child(3) {
+            border-radius: vwmo(30);
+          }
+
+          &.action {
+            flex: 1 !important;
+          }
+
+          &:not(:hover) {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

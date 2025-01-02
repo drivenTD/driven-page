@@ -1,0 +1,94 @@
+.aboutSection {
+  width: 100%;
+  position: relative;
+  padding: 21.875rem 0 9.375rem;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.aboutSection .radialGrad {
+  position: absolute;
+  left: -100rem;
+  top: 0rem;
+  z-index: 1;
+}
+.aboutSection .readTxt {
+  position: relative;
+  z-index: 2;
+}
+.aboutSection .readTxt h3 {
+  width: 100%;
+  font-size: 3.125rem;
+  line-height: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.aboutSection .readTxt h3 .wordBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.aboutSection .buttonBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4.375rem;
+  position: relative;
+  z-index: 2;
+}
+.aboutSection .buttonBox a {
+  width: 33.3333333333%;
+  margin-top: 1.875rem;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .aboutSection {
+    padding: calc(100 / 1280 * 100vw) 0 calc(100 / 1280 * 100vw);
+  }
+  .aboutSection .radialGrad {
+    left: calc(-1572 / 1280 * 100vw);
+    top: calc(-200 / 1280 * 100vw);
+  }
+  .aboutSection .readTxt h3 {
+    font-size: calc(38 / 1280 * 100vw);
+    line-height: calc(60 / 1280 * 100vw);
+    gap: calc(60 / 1280 * 100vw);
+  }
+  .aboutSection .readTxt h3 .wordBox {
+    gap: calc(8 / 1280 * 100vw);
+  }
+  .aboutSection .buttonBox {
+    margin-top: calc(92 / 1280 * 100vw);
+  }
+  .aboutSection .buttonBox a {
+    width: 33.3333333333%;
+    margin-top: calc(20 / 1280 * 100vw);
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  .aboutSection {
+    padding: calc(200 / 768 * 100vw) 0 calc(200 / 768 * 100vw);
+  }
+  .aboutSection .radialGrad {
+    left: calc(-1600 / 768 * 100vw);
+    top: calc(560 / 768 * 100vw);
+  }
+  .aboutSection .readTxt h3 {
+    font-size: calc(48 / 768 * 100vw);
+    line-height: calc(80 / 768 * 100vw);
+    gap: calc(80 / 768 * 100vw);
+  }
+  .aboutSection .readTxt h3 .wordBox {
+    gap: calc(10 / 768 * 100vw);
+  }
+  .aboutSection .buttonBox {
+    margin-top: calc(92 / 768 * 100vw);
+  }
+  .aboutSection .buttonBox a {
+    font-size: calc(28 / 768 * 100vw);
+    width: 50%;
+    margin-top: calc(20 / 768 * 100vw);
+  }
+  .aboutSection .buttonBox a svg {
+    width: calc(38 / 768 * 100vw);
+  }
+}

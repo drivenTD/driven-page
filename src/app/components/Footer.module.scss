@@ -1,0 +1,346 @@
+@import "../styles/mixin.scss";
+
+.footer {
+  position: relative;
+  padding: rem(150) 0 0;
+  background: $black-color;
+  color: $white-color;
+  overflow: hidden;
+  transform:translateY(0);
+  border-top:1px solid $grid-line-color;
+
+  .index {
+    display: flex;
+    flex-direction: column;
+    gap: rem(180);
+    position: relative;
+    z-index: 2;
+  }
+
+  .radialGrad {
+    width: rem(2500);
+    height: rem(2500);
+    position: absolute;
+    left: 50%;
+    bottom: rem(-2000);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .logo {
+    svg {
+        opacity:.5;
+      width: rem(160);
+    }
+  }
+
+  .footLinksWrap {
+    display: flex;
+
+    .linkList,
+    .instarList {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+        a {
+          font-size: rem(24);
+          color: $white-color;
+        }
+      }
+    }
+
+    .instarList {
+      a {
+        display: flex;
+        justify-content: space-between;
+        svg {
+          width: rem(24);
+          height: rem(24);
+        }
+      }
+    }
+  }
+
+  .information {
+    display: flex;
+    align-items: end;
+    .infoList {
+      display: flex;
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+      }
+      .txtBox {
+        strong {
+          display: block;
+          font-size: rem(20);
+          font-weight: 500;
+          color: $white-color;
+          margin-bottom: rem(10);
+        }
+        font-size: rem(20);
+        line-height: 120%;
+        color: $white-color-opacity;
+      }
+    }
+  }
+
+  .contact {
+    text-align: right;
+    & > div {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      flex-direction: column;
+      gap: rem(15);
+    }
+  }
+
+  .contactBtn {
+    width: rem(220);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: rem(10);
+    background: #222;
+    padding: rem(10) rem(15);
+    color: $white-color;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+    &:hover::before {
+      transform: translateX(100%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, $main-color, $main-color);
+      transition: transform 0.4s ease;
+      transform: translateX(0);
+      z-index: -1;
+    }
+    svg {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+
+  .copyright {
+    margin-top: rem(50);
+    height: rem(100);
+    display: flex;
+    align-items: center;
+    color: $white-color-opacity;
+    font-size: rem(20);
+    border-top: 1px solid $grid-line-color;
+
+    .personal {
+      display: flex;
+      justify-content: end;
+      gap: rem(15);
+      a {
+        color: $white-color;
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    padding: vwtb(70) 0 0;
+    
+    .index{
+        gap: vwtb(100);
+    }
+
+    .radialGrad {
+      width: vwtb(1480);
+      height: vwtb(1480);
+      bottom: vwtb(-1100);
+    }
+
+    .logo {
+      svg {
+        width: vwtb(120);
+      }
+    }
+
+    .footLinksWrap {
+
+      .linkList,
+      .instarList {
+        nav {
+          gap: vwtb(20);
+          a {
+            font-size: vwtb(18);
+          }
+        }
+      }
+
+      .instarList {
+        a {
+          svg {
+            width: vwtb(24);
+            height: vwtb(24);
+          }
+        }
+      }
+    }
+
+    .information {
+      .infoList {
+        .box {
+          gap: vwtb(15);
+        }
+        .txtBox {
+          strong {
+            font-size: vwtb(18);
+            margin-bottom: rem(10);
+          }
+          font-size: vwtb(18);
+        }
+      }
+    }
+
+    .contact {
+      & > div {
+        gap: vwtb(20);
+      }
+
+      p{
+        font-size: vwtb(18);
+      }
+    }
+
+    .contactBtn {
+      width: vwtb(176);
+      border-radius: vwtb(10);
+      padding: vwtb(7) vwtb(15);
+      font-size: vwtb(16);
+      svg {
+        width: vwtb(24);
+        height: vwtb(24);
+      }
+    }
+
+    .copyright {
+      margin-top: vwtb(50);
+      height: vwtb(58);
+      font-size: vwtb(15);
+
+      .personal {
+        gap: vwtb(10);
+        a {
+          font-size: vwtb(15);
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .footer {
+      padding: vwmo(100) 0 0;
+      
+      .index{
+          gap: vwmo(0);
+      }
+  
+      .radialGrad {
+        width: vwmo(1333);
+        height: vwmo(1333);
+        bottom: vwmo(-1100);
+      }
+  
+      .logo {
+        svg {
+          width: vwmo(160);
+        }
+      }
+  
+      .footLinksWrap {
+        .linkList{
+            display:none;
+        }
+        .linkList,
+        .instarList {
+          nav {
+            gap: vwmo(30);
+            a {
+              font-size: vwmo(28);
+            }
+          }
+        }
+  
+        .instarList {
+          a {
+            svg {
+              width: vwmo(30);
+              height: vwmo(30);
+            }
+          }
+        }
+      }
+  
+      .information {
+        .infoList {
+            flex-direction: column;
+            gap:vwmo(0);
+          .box {
+            gap: vwmo(30);
+          }
+          .txtBox {
+            strong {
+              font-size: vwmo(26);
+              margin-bottom: rem(10);
+            }
+            font-size: vwmo(26);
+          }
+        }
+      }
+  
+      .contact {
+        & > div {
+          gap: vwmo(25);
+        }
+  
+        p{
+          font-size: vwmo(28);
+        }
+      }
+  
+      .contactBtn {
+        width: vwmo(266);
+        border-radius: vwmo(10);
+        padding: vwmo(10) vwmo(15);
+        font-size: vwmo(26);
+        svg {
+          width: vwmo(30);
+          height: vwmo(30);
+        }
+      }
+  
+      .copyright {
+        margin-top: vwmo(80);
+        height: vwmo(100);
+        font-size: vwmo(22);
+  
+        .personal {
+          gap: vwmo(20);
+          a {
+            font-size: vwmo(22);
+          }
+        }
+      }
+    }
+  }

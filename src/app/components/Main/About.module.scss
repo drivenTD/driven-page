@@ -1,0 +1,116 @@
+@import '../../styles/mixin.scss';
+
+.aboutSection{
+    width:100%;
+    position:relative;
+    padding: rem(350) 0 rem(150);
+    background:$black-color;
+    color: $white-color;
+
+    .radialGrad{
+        position:absolute;
+        left: rem(-1600);
+        top: rem(0);
+        z-index: 1;
+    }
+
+    .readTxt{
+        position:relative;
+        z-index:2;
+        h3{
+            width: 100%;
+            font-size: rem(50);
+            line-height: rem(70);
+            display:flex;
+            flex-direction: column;
+            gap:rem(80);
+            
+            .wordBox{
+                display:flex;
+                flex-wrap: wrap;
+                gap:rem(8);
+            }
+        }
+    }
+
+    .buttonBox{
+        display:flex;
+        flex-wrap: wrap;
+        margin-top: rem(70);
+        position:relative;
+        z-index: 2;
+        a{
+            width:calc(100% / 3);
+            margin-top: rem(30);
+        }
+    }
+}
+
+
+
+@include tablet{
+    .aboutSection{
+        padding: vwtb(100) 0 vwtb(100);
+    
+        .radialGrad{
+            left: vwtb(-1572);
+            top: vwtb(-200);
+        }
+    
+        .readTxt{
+            h3{
+                font-size: vwtb(38);
+                line-height: vwtb(60);
+                gap:vwtb(60);
+                
+                .wordBox{
+                    gap:vwtb(8);
+                }
+            }
+        }
+    
+        .buttonBox{
+            margin-top: vwtb(92);
+            a{
+                width: calc(100% / 3);
+                margin-top: vwtb(20);
+            }
+        }
+    }
+}
+
+
+@include mobile{
+    .aboutSection{
+        padding: vwmo(200) 0 vwmo(200);
+    
+        .radialGrad{
+            left: vwmo(-1600);
+            top: vwmo(560);
+        }
+    
+        .readTxt{
+            h3{
+                font-size: vwmo(48);
+                line-height: vwmo(80);
+                gap:vwmo(80);
+                
+                .wordBox{
+                    gap:vwmo(10);
+                }
+            }
+        }
+    
+        .buttonBox{
+            margin-top: vwmo(92);
+            a{
+                font-size: vwmo(28);
+                width: calc(100% / 2);
+                margin-top: vwmo(20);
+                svg{
+                    width:vwmo(38);
+                }
+            }
+        }
+    }
+}

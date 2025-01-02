@@ -1,0 +1,218 @@
+@import "../../../styles/mixin.scss";
+
+.serviceSection {
+  padding: rem(150) 0;
+  color: $white-color;
+  background: $black-color url("/image/voucher/serviceBackground.png") center
+    no-repeat;
+  background-size: rem(2921);
+  .titWrap {
+    span {
+      color: $white-color-opacity;
+      margin-bottom: rem(20);
+    }
+  }
+
+  .serviceSwiper {
+    position: relative;
+    margin-top: rem(70);
+    .swipeItem {
+      width: rem(600);
+      &.active {
+        .slideContent {
+          background: #fff;
+          color: $black-color;
+          svg {
+            path {
+              fill: $black-color;
+            }
+          }
+        }
+      }
+    }
+    .slideContent {
+      width: rem(600);
+      height: rem(540);
+      padding: rem(50) rem(40);
+      border: 1px solid $white-color;
+      border-radius: rem(20);
+      overflow: hidden;
+      color: $white-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .tit {
+        font-size: rem(30);
+        line-height: rem(45);
+        font-weight: 700;
+        span {
+          display: block;
+        }
+      }
+      .keyword {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(15);
+      }
+
+      .ico {
+        svg {
+          width: rem(40);
+          path {
+            fill: $white-color;
+          }
+        }
+      }
+    }
+  }
+  .customNavigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: rem(600);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: rem(70);
+      height: rem(70);
+      border-radius: 100%;
+      background-color: $white-color;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border:1px solid $grid-line-color;
+      &.prevButton {
+        margin-left: rem(-115);
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+      &.nextButton {
+        margin-right: rem(-115);
+      }
+      svg {
+        width: rem(11.37);
+        path {
+          stroke: $black-color;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .serviceSection {
+    padding: vwtb(150) 0;
+    background-size: vwtb(2921);
+    .titWrap {
+      span {
+        margin-bottom: vwtb(20);
+      }
+    }
+
+    .serviceSwiper {
+      margin-top: vwtb(70);
+      .swipeItem {
+        width: vwtb(440);
+      }
+      .slideContent {
+        width: vwtb(440);
+        height: vwtb(540);
+        padding: vwtb(50) vwtb(40);
+        border-radius: vwtb(20);
+
+        .tit {
+          font-size: vwtb(26);
+          line-height: vwtb(36);
+        }
+        .keyword {
+          gap: vwtb(15);
+        }
+
+        .ico {
+          svg {
+            width: vwtb(40);
+          }
+        }
+      }
+    }
+    .customNavigation {
+      width: vwtb(440);
+      button {
+        width: vwtb(50);
+        height: vwtb(50);
+        &.prevButton {
+          margin-left: vwtb(-25);
+        }
+        &.nextButton {
+          margin-right: vwtb(-25);
+        }
+        svg {
+          width: vwtb(11.37);
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .serviceSection {
+      padding: vwmo(150) 0;
+      background-size: vwmo(2290);
+      .titWrap {
+        span {
+          margin-bottom: vwmo(20);
+        }
+      }
+  
+      .serviceSwiper {
+        margin-top: vwmo(70);
+        .swipeItem {
+          width: vwmo(660);
+        }
+        .slideContent {
+          width: vwmo(660);
+          height: vwmo(600);
+          padding: vwmo(40) vwmo(30);
+          border-radius: vwmo(20);
+  
+          .tit {
+            font-size: vwmo(36);
+            line-height: vwmo(46);
+          }
+          .keyword {
+            gap: vwmo(20);
+          }
+  
+          .ico {
+            svg {
+              width: vwmo(43);
+            }
+          }
+        }
+      }
+      .customNavigation {
+        width: vwmo(660);
+        button {
+          width: vwmo(75);
+          height: vwmo(75);
+          &.prevButton {
+            margin-left: vwmo(calc(-75 / 2));
+          }
+          &.nextButton {
+            margin-right: vwmo(calc(-75 / 2));
+          }
+          svg {
+            width: vwmo(14.12);
+          }
+        }
+      }
+    }
+  }
+  
