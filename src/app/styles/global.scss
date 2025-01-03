@@ -284,34 +284,42 @@
     rgba(0, 0, 0, 0.2) 60%
   );
 }
+.radialGradBg{
+  position:absolute;
+  top:0;
+  right:0;
+  img{
+    width:vwpc(977);
+  }
+}
 
 @include desktop {
   .col-lg-1 {
-    @include column(1);
+    width:calc(100% / 5);
   }
   .col-lg-2 {
-    @include column(2);
+    width: calc(100% / 5 * 2);
   }
   .col-lg-3 {
-    @include column(3);
+    width: calc(100% / 5 * 3);
   }
   .col-lg-4 {
-    @include column(4);
+    width: calc(100% / 5 * 4);
   }
   .col-lg-5 {
-    @include column(5);
+    width: calc(100% / 5 * 5);
   }
   .col-lg-span-1 {
-    @include column-span(1);
+    padding-left: calc(100% / 5);
   }
   .col-lg-span-2 {
-    @include column-span(2);
+    padding-left: calc(100% / 5 * 2);
   }
   .col-lg-span-3 {
-    @include column-span(3);
+    padding-left: calc(100% / 5 * 3);
   }
   .col-lg-span-4 {
-    @include column-span(4);
+    padding-left: calc(100% / 5 * 4);
   }
   .col-lg-span-5 {
     @include column-span(5);
@@ -393,7 +401,7 @@
   }
 
   .btn-line {
-    width: $single-grid-tb-col;
+    width: 100%;
     @include btn-line(rem(1), vwtb(18), vwtb(10), vwtb(15));
 
     svg {
@@ -416,29 +424,27 @@
   }
 
   .col-md-1 {
-    @include column-tb(1);
+    width: calc(100% / 4);
   }
   .col-md-2 {
-    @include column-tb(2);
+    width: calc(100% / 4 * 2);
   }
   .col-md-3 {
-    @include column-tb(3);
+    width: calc(100% / 4 * 3);
   }
   .col-md-4 {
-    @include column-tb(4);
+    width: calc(100% / 4 * 4);
   }
 
   .col-md-span-1 {
-    @include column-tb-span(1);
+    padding-left:calc(100% / 4);
+    
   }
   .col-md-span-2 {
-    @include column-tb-span(2);
+    padding-left:calc(100% / 4 * 2);
   }
   .col-md-span-3 {
-    @include column-tb-span(3);
-  }
-  .col-md-span-4 {
-    @include column-tb-span(4);
+    padding-left:calc(100% / 4 * 3);
   }
 
   .col-md-line3-1 {
@@ -483,6 +489,15 @@
       &:last-child {
         display: none;
       }
+    }
+  }
+
+  .radialGradBg{
+    position:absolute;
+    top:0;
+    right:0;
+    img{
+      width:vwtb(750);
     }
   }
 
@@ -584,17 +599,14 @@
   }
 
   .col-xs-1 {
-    @include column-mo(1);
+    width:calc(100% / 2);
   }
   .col-xs-2 {
-    @include column-mo(2);
+    width:calc(100% / 2 * 2);
   }
 
   .col-xs-span-1 {
-    @include column-mo-span(1);
-  }
-  .col-xs-span-2 {
-    @include column-mo-span(2);
+    padding-left:calc(100% / 2);
   }
 
   .grid {
@@ -604,6 +616,15 @@
       &:nth-child(n + 4) {
         display: none;
       }
+    }
+  }
+
+  .radialGradBg{
+    position:absolute;
+    top:vwmo(200);
+    right:0;
+    img{
+      width:vwmo(977);
     }
   }
 

@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(50);
+
     .item {
       width: 100%;
       height: rem(410);
@@ -59,13 +60,16 @@
           position: relative;
           font-size: rem(20);
           gap: rem(10);
+
           li {
             display: flex;
             gap: rem(10);
+
             &::before {
               content: "·";
               display: block;
             }
+
             &:first-child {
               &::before {
                 display: none;
@@ -82,6 +86,7 @@
     flex-direction: column;
     gap: rem(50);
     margin-top: rem(70);
+
     .portfolioDesc {
       font-size: rem(28);
       line-height: rem(48);
@@ -100,6 +105,7 @@
 
     .portfolioLists {
       gap: vwtb(30);
+
       .item {
         height: vwtb(380);
         border-radius: vwtb(30);
@@ -118,6 +124,7 @@
           .descList {
             font-size: vwtb(18);
             gap: vwtb(5);
+
             li {
               gap: vwtb(5);
             }
@@ -125,9 +132,11 @@
         }
       }
     }
+
     .portfolioAbout {
       gap: vwtb(40);
       margin-top: vwtb(60);
+
       .portfolioDesc {
         font-size: vwtb(20);
         line-height: vwtb(40);
@@ -147,6 +156,7 @@
 
     .portfolioLists {
       gap: vwmo(50);
+
       .item {
         height: vwmo(420);
         border-radius: vwmo(30);
@@ -162,6 +172,7 @@
           flex-direction: column;
           align-items: start;
           gap: vwmo(20);
+
           .desc {
             font-size: vwmo(32);
           }
@@ -170,12 +181,14 @@
             flex-wrap: wrap;
             font-size: vwmo(24);
             gap: vwmo(5);
+
             li {
               gap: vwmo(5);
               color: $white-color;
               background-color: $black-color;
               border-radius: vwmo(30);
               padding: vwmo(12) vwmo(10);
+
               &::before {
                 content: "";
                 display: none;
@@ -187,12 +200,18 @@
     }
 
     .portfolioAbout {
-        gap: vwmo(40);
-        margin-top: vwmo(60);
-        .portfolioDesc {
-          font-size: vwmo(34);
-          line-height: vwmo(54);
+      gap: vwmo(40);
+      margin-top: vwmo(60);
+
+      .portfolioDesc {
+        font-size: vwmo(34);
+        line-height: vwmo(54);
+      }
+      .buttonWrap{
+        a{
+          width:100%;
         }
       }
+    }
   }
 }

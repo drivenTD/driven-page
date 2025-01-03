@@ -77,7 +77,7 @@
           @include text(vwtb(20), vwtb(40), 300);
         }
         .buttonWrap {
-          padding-left: $single-grid-tb-col;
+          padding-left: calc(100% / 4 * 2);
         }
       }
     }
@@ -115,8 +115,11 @@
           @include text(vwpc(54), vwpc(74), 300);
         }
         .buttonWrap {
-          padding-left: $single-grid-mo-col;
+          padding-left: calc(100% / 2);
           opacity: 0;
+          a{
+            width:100%;
+          }
         }
       }
     }

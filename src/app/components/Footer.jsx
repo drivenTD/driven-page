@@ -28,7 +28,7 @@ export default function Footer(information) {
               <nav className={`${styles.footNav} col-span-15`} lang="en">
                 <Link href="/pages/company/driven-story">Company</Link>
                 <Link href="/pages/marketing/google">Marketing</Link>
-                <Link href="/pages/work">Work</Link>
+                <Link href="/pages/portfolio">Work</Link>
                 <Link href="/pages/solution">Solution</Link>
                 <Link href="/pages/voucher">Voucher</Link>
               </nav>
@@ -58,7 +58,7 @@ export default function Footer(information) {
         <div className="container">
           <div className={styles.information}>
             <div className={`${styles.infoList} col-lg-2 col-md-2 col-xs-1`}>
-              <div className={`${styles.box} col-lg-1 col-md-1 col-span-15 `}>
+              <div className={`${styles.box} col-span-15 `}>
                 <div className={styles.txtBox}>
                   <strong>대표</strong>
                   {information.exponent}

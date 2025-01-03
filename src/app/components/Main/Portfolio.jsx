@@ -171,7 +171,7 @@ export default function Portfolio() {
             </p>
           </div>
           <div
-            className={`${styles.buttonWrap} col-lg-span-3 col-md-span-2 col-xs-span-1`}
+            className={`${styles.buttonWrap} col-lg-span-3 col-md-3 col-md-span-2 col-xs-span-1`}
           >
             <Link href="#;" className="btn-line">
               <span>See All Works</span>

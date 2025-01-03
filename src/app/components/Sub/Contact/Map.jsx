@@ -105,10 +105,8 @@ export default function Map() {
 
       {/* 주소 및 연락처 정보 */}
       <div className={`${styles.adressWrap} container`}>
-        <div className={styles.infoWrap}>
-          <div
-            className={`${styles.mapInfotxt} col-lg-1 col-md-1 col-xs-1 col-span-15`}
-          >
+        <div className={`${styles.infoWrap} col-lg-3 col-md-3 col-xs-1`}>
+          <div className={`${styles.mapInfotxt} col-span-15`}>
             <p className={styles.tit} lang="en">
               ADRESS
             </p>
@@ -118,9 +116,7 @@ export default function Map() {
               145길 13, 202호 (럭스웨이빌딩)
             </p>
           </div>
-          <div
-            className={`${styles.mapInfotxt} col-lg-1 col-md-1 col-xs-1 col-span-15`}
-          >
+          <div className={`${styles.mapInfotxt} col-span-15`}>
             <p className={styles.tit} lang="en">
               E-Mail
             </p>
@@ -128,9 +124,7 @@ export default function Map() {
               <Link href="mailto:help@driven.co.kr">help@driven.co.kr</Link>
             </p>
           </div>
-          <div
-            className={`${styles.mapInfotxt} col-lg-1 col-md-1 col-xs-1 col-span-15`}
-          >
+          <div className={`${styles.mapInfotxt} col-span-15`}>
             <p className={styles.tit} lang="en">
               TEL
             </p>

@@ -25,32 +25,32 @@ export default function Header() {
     setIsClassToggled(false); // 메뉴 닫기
   };
 
-  const handleScroll = () => {
-    if (typeof window !== "undefined") {
-      // 현재 스크롤 위치 가져오기
-      const currentScrollY = window.scrollY;
+  // const handleScroll = () => {
+  //   if (typeof window !== "undefined") {
+  //     // 현재 스크롤 위치 가져오기
+  //     const currentScrollY = window.scrollY;
 
-      // 아래로 스크롤 시 헤더 숨기기
-      if (currentScrollY > lastScrollY && currentScrollY > 1) {
-        setIsHidden(true);
-      } else if (currentScrollY < lastScrollY && currentScrollY > 1) {
-        // 위로 스크롤 시 헤더 보이기
-        setIsHidden(false);
-      }
+  //     // 아래로 스크롤 시 헤더 숨기기
+  //     if (currentScrollY > lastScrollY && currentScrollY > 1) {
+  //       setIsHidden(true);
+  //     } else if (currentScrollY < lastScrollY && currentScrollY > 1) {
+  //       // 위로 스크롤 시 헤더 보이기
+  //       setIsHidden(false);
+  //     }
 
-      // 마지막 스크롤 위치 업데이트
-      setLastScrollY(currentScrollY);
-    }
-  };
+  //     // 마지막 스크롤 위치 업데이트
+  //     setLastScrollY(currentScrollY);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    // 컴포넌트가 언마운트될 때 이벤트 리스너 정리
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+  //   // 컴포넌트가 언마운트될 때 이벤트 리스너 정리
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollY]);
 
   return (
     <div className={styles.topbar}>

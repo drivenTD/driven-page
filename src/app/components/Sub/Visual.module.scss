@@ -144,6 +144,12 @@
       gap: vwmo(100);
       flex-direction: column-reverse;
     }
+
+    .buttonWrap {
+      a {
+        width: 100%;
+      }
+    }
     .titleWrap {
       flex-direction: column;
       h2 {

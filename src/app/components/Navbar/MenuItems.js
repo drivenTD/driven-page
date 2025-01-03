@@ -20,7 +20,7 @@ export const menuItems = [
       { label: "Kakao", link: "/pages/marketing/kakao" }
     ]
   },
-  { label: "Work", link: "/pages/work/portfolio" },
+  { label: "Work", link: "/pages/portfolio" },
   { label: "Solution", link: "/pages/solution" },
   { label: "Voucher", link: "/pages/voucher" }
   //{ label: "Contact", link: "/contact" }

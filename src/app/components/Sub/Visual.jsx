@@ -11,7 +11,6 @@ import ScrollBtn from "@/image/global/scroll-ico.svg";
 export default function SubTemplate({ pagePosition, pageName }) {
   return (
     <div className={styles.subVisual}>
-      <div className={`${styles.radialGrad} radial-grad`}></div>
       <div className={`${styles.visualWrap} container`}>
         <div
           className={`${styles.buttonWrap} col-lg-5 col-lg-span-4 col-md-4 col-md-span-3 col-xs-2 col-xs-span-1`}

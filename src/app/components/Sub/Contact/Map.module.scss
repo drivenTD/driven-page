@@ -18,6 +18,7 @@
         display:flex;
     }
     .mapInfotxt {
+      width:calc(100% / 3);
       .tit {
         font-size: rem(24);
         font-weight: 600;
@@ -66,6 +67,7 @@
       flex-wrap: wrap;
       margin-top: vwtb(80);
       .mapInfotxt {
+        width:calc(100% / 4 * 3);
         .tit {
           font-size: vwtb(24);
           font-weight: 600;
@@ -113,6 +115,7 @@
             flex-direction: column;
         }
         .mapInfotxt {
+          width: 100%;
           .tit {
             font-size: vwmo(28);
             margin-bottom: vwmo(15);
