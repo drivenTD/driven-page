@@ -1,4 +1,5 @@
-@import "../../../styles/mixin.scss";
+@use "../../../styles/mixin" as *;
+
 
 .flowListSection {
   padding: rem(100) 0;

@@ -1,0 +1,148 @@
+@use "../../../styles/mixin" as *;
+
+.strategySection {
+  padding: vwpc(150) 0;
+  background: #111;
+
+  .desc {
+    text-align: center;
+    font-size: vwpc(20);
+    line-height: vwpc(30);
+  }
+
+  .diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: vwpc(80) 0;
+    li {
+      flex: 0 0 auto;
+      width: vwpc(250);
+      height: vwpc(250);
+      padding:vwpc(20);
+      font-size: vwpc(28);
+      line-height: vwpc(38);
+      text-align: center;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      overflow: hidden;
+      background: $white-color;
+      color: $black-color;
+      border: 1px solid $white-color;
+
+      &:nth-child(2n + 1) {
+        background: none;
+        color: $white-color;
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-right: vwpc(-10);
+      }
+      &:last-child {
+        flex-direction: column;
+        color: $main-color;
+        &::before {
+          width: vwpc(40);
+          height: vwpc(40);
+          content: "";
+          display: block;
+          background: url("/image/checkIco.png") center no-repeat;
+          background-size: vwpc(40);
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .strategySection {
+    padding: vwtb(150) 0;
+
+    .desc {
+      font-size: vwtb(16);
+      line-height: vwtb(26);
+    }
+
+    .diagram {
+      margin: vwtb(70) 0;
+      li {
+        flex: 0 0 auto;
+        width: vwtb(220);
+        height: vwtb(220);
+        padding:vwtb(18);
+        font-size: vwtb(24);
+        line-height: vwtb(34);
+        &:last-child {
+          flex-direction: column;
+          color: $main-color;
+          &::before {
+            width: vwtb(36);
+            height: vwtb(36);
+            background-size: vwtb(36);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .strategySection {
+    padding: vwmo(150) 0;
+    background: #111;
+
+    .desc {
+      text-align: center;
+      font-size: vwmo(26);
+      line-height: vwmo(36);
+    }
+
+    .diagram {
+    width:vwmo(480);
+      display: flex;
+      flex-wrap: wrap;
+      margin: vwmo(80) auto;
+      li {
+        flex: 0 0 auto;
+        width: vwmo(250);
+        height: vwmo(250);
+        padding:vwmo(18);
+        font-size: vwmo(28);
+        line-height: vwmo(38);
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        overflow: hidden;
+        background: $white-color;
+        color: $black-color;
+        border: 1px solid $white-color;
+
+        
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-right: vwmo(-10);
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: vwmo(-20);
+        }
+        &:last-child {
+          box-shadow: 0px -22px 20px -15px $black-color-opacity;
+          &::before {
+            width: vwmo(40);
+            height: vwmo(40);
+            background-size: vwmo(40);
+          }
+        }
+      }
+    }
+  }
+}

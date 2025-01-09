@@ -1,0 +1,469 @@
+@use "../../../styles/mixin" as *;
+
+.fixedinSection {
+  position: relative;
+  padding: vwpc(200) 0;
+  height: 350vh;
+
+  &.addCont {
+    height: 400vh;
+    padding: vwpc(200) 0 0;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    .fixedSectionCont {
+      background: url("/image/marketing/meta/fixedSectionVisual.jpg") center
+        no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0.2) 52%
+        );
+        position: absolute;
+        top: 0;
+      }
+
+      .titWrap {
+        position: static;
+        align-items: center;
+      }
+    }
+  }
+
+  &:global(.black) {
+    background: $black-color;
+    :global(.pageDesc) {
+      color: $white-color-opacity !important;
+    }
+    .item {
+      box-shadow: 0 vwpc(8) vwpc(15) 0 rgba(255, 255, 255, 0.15) !important;
+    }
+  }
+  :global(.pageDesc) {
+    color: $black-color-opacity !important;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  .titWrap {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    justify-content: center;
+    .tit {
+      margin-bottom: vwpc(50);
+    }
+  }
+
+  .fixedCont {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100vh;
+    .itemWrap {
+      position: relative;
+      .emojiBox {
+        display: none;
+      }
+      &:nth-child(2) {
+        margin-top: vwpc(200);
+      }
+      &:nth-child(3) {
+        margin-top: vwpc(100);
+        margin-right: calc(100% / 5);
+      }
+      &:nth-child(5) {
+        margin-top: vwpc(-100);
+      }
+      &:nth-child(6) {
+        margin-top: vwpc(-130);
+      }
+      &:nth-child(7) {
+        margin-top: vwpc(-100);
+      }
+
+      &.emoji {
+        &.clap {
+          &::before {
+            z-index: -1;
+            left: vwpc(-112);
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__clap.png") no-repeat;
+          }
+        }
+
+        &.eye {
+          &::before {
+            z-index: -1;
+            top: vwpc(30);
+            left: calc(100% / 5 + vwtb(30));
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__eye.png") no-repeat;
+          }
+        }
+
+        &.great {
+          &::before {
+            z-index: -1;
+            top: vwpc(10);
+            left: calc(100% - vwpc(60));
+            width: vwpc(152);
+            height: vwpc(152);
+            background: url("/image/marketing/emoji__great.png") no-repeat;
+          }
+        }
+
+        &.face {
+          &::before {
+            z-index: -1;
+            transform:scaleX(-1);
+            top: vwpc(30);
+            left: calc(100% - vwpc(80));
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__face.png") no-repeat;
+          }
+        }
+
+        &.strong {
+          &::before {
+            z-index: -1;
+            top: vwpc(30);
+            left: -50%;
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__strong.png") no-repeat;
+          }
+        }
+
+        &.phone {
+          &::before {
+            transform: scaleX(-1);
+            z-index: -1;
+            left: calc(100% / 5 + vwtb(70));
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__phone.png") no-repeat;
+          }
+        }
+
+        &.pen {
+          &::before {
+            z-index: -1;
+            transform: scaleX(-1);
+            right: vwpc(-132);
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__pen.png") no-repeat;
+          }
+        }
+
+        &.okay {
+          &::before {
+            z-index: -1;
+            transform: scaleX(-1);
+            top: vwpc(30);
+            right: vwpc(-102);
+            width: vwpc(162);
+            height: vwpc(162);
+            background: url("/image/marketing/emoji__okay.png") no-repeat;
+          }
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-size: cover !important;
+        }
+      }
+    }
+
+    .item {
+      text-align: center;
+      background: $white-color;
+      font-size: vwpc(24);
+      line-height: vwpc(40);
+      padding: vwpc(50) vwpc(10);
+      border-radius: vwpc(20);
+      box-shadow: 0 vwpc(8) vwpc(15) 0 rgba(0, 0, 0, 0.15);
+
+      .title {
+        font-size: vwpc(28);
+        line-height: vwpc(38);
+        font-weight: 700;
+      }
+      .label {
+        font-size: vwpc(20);
+        color: $black-color-opacity;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .fixedinSection {
+    padding: vwtb(200) 0;
+    height: 300vh;
+
+    &.addCont {
+      height: 350vh;
+      padding: vwtb(200) 0 0;
+    }
+
+    .titWrap {
+      height: 100vh;
+      .tit {
+        margin-bottom: vwtb(50);
+      }
+    }
+
+    .fixedCont {
+      height: 100vh;
+      .itemWrap {
+        position: relative;
+        &:nth-child(2) {
+          margin-top: vwtb(140);
+        }
+        &:nth-child(3) {
+          margin-top: vwtb(70);
+          margin-right: 0;
+        }
+        &:nth-child(4) {
+          margin-top: vwtb(-460);
+        }
+        &:nth-child(5) {
+          margin-top: vwtb(-300);
+        }
+        &:nth-child(6) {
+          margin-top: vwtb(-420);
+        }
+        &:nth-child(7) {
+          margin-top: vwtb(-380);
+        }
+        &:nth-child(8) {
+          margin-top: vwtb(-550);
+        }
+
+        &.emoji {
+          &.clap {
+            &::before {
+              z-index: -1;
+              left: vwtb(-102);
+              width: vwtb(142);
+              height: vwtb(142);
+            }
+          }
+
+          &.eye {
+            &::before {
+              top: vwtb(30);
+              left: calc(100% / 5 + vwtb(90));
+              width: vwtb(122);
+              height: vwtb(122);
+            }
+          }
+
+          &.great {
+            &::before {
+              top: vwtb(30);
+              left: calc(100% - vwtb(60));
+              width: vwtb(142);
+              height: vwtb(142);
+            }
+          }
+  
+          &.face {
+            &::before {
+              transform:scaleX(1) translateX(-50%);
+              top: vwtb(100);
+              left: 50%;
+              width: vwtb(162);
+              height: vwtb(162);
+            }
+          }
+
+          &.strong {
+            &::before {
+              top: vwtb(10);
+              left: vwtb(-100);
+              width: vwtb(132);
+              height: vwtb(132);
+            }
+          }
+
+          &.phone {
+            &::before {
+              left: vwtb(-100);
+              width: vwtb(132);
+              height: vwtb(132);
+            }
+          }
+
+          &.pen {
+            &::before {
+              z-index: -1;
+              transform: scaleX(1);
+              right: calc(100% / 5 + vwtb(132));
+              width: vwtb(132);
+              height: vwtb(132);
+            }
+          }
+
+          &.okay {
+            &::before {
+              z-index: -1;
+              transform: scaleX(1) translateX(-50%);
+              top: vwtb(-130);
+              left: 50%;
+              width: vwtb(142);
+              height: vwtb(142);
+              background: url("/image/marketing/emoji__okay.png") no-repeat;
+            }
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-size: cover !important;
+          }
+        }
+      }
+
+      .item {
+        text-align: center;
+        background: $white-color;
+        font-size: vwtb(20);
+        line-height: vwtb(30);
+        padding: vwtb(40) vwtb(10);
+        border-radius: vwtb(20);
+        box-shadow: 0 vwtb(8) vwtb(15) 0 rgba(0, 0, 0, 0.15);
+        .title {
+          font-size: vwtb(24);
+          line-height: vwtb(34);
+        }
+        .label {
+          font-size: vwtb(16);
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .fixedinSection {
+    padding: vwmo(200) 0;
+    height: auto;
+
+    &.addCont {
+      height: auto;
+      padding: vwmo(200) 0 0;
+
+      .fixedSectionCont {
+        height: vwmo(700);
+        margin-top: vwmo(100);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.2) 52%
+          );
+          position: absolute;
+          top: 0;
+        }
+
+        .titWrap {
+          position: static;
+          align-items: center;
+        }
+      }
+    }
+
+    :global(.pageDesc) {
+      text-align: left;
+    }
+
+    .titWrap {
+      height: auto;
+      position: static;
+
+      justify-content: center;
+      .tit {
+        margin-bottom: vwmo(40);
+      }
+    }
+
+    .fixedCont {
+      margin-top: vwmo(50);
+      height: auto;
+      .itemWrap {
+        position: relative;
+        margin: 0 !important;
+
+        .emojiBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            &:first-child {
+              width: vwmo(162);
+            }
+            width: vwmo(142);
+          }
+        }
+
+        &.emoji {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      .item {
+        text-align: center;
+        background: $white-color;
+        font-size: vwmo(26);
+        line-height: vwmo(42);
+        padding: vwmo(40) vwmo(10);
+        border-radius: vwmo(20);
+        box-shadow: 0 vwmo(8) vwmo(15) 0 rgba(0, 0, 0, 0.15);
+        .title {
+          font-size: vwmo(30);
+          line-height: vwmo(40);
+        }
+        .label {
+          font-size: vwmo(24);
+        }
+      }
+    }
+  }
+}

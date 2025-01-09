@@ -1,0 +1,179 @@
+@use "../../../../styles/mixin" as *;
+
+.solutionSection {
+  padding: rem(50) 0;
+  height: 100vh;
+  :global(.container) {
+    height: 100%;
+    display: flex;
+    & > div {
+      height: 100%;
+    }
+  }
+
+  .titWrap {
+    padding: rem(50) 0;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .solutionItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(30);
+    height: 100%;
+    position: relative;
+    background: #c3c3c3;
+    overflow: hidden;
+    &::before {
+      content: "";
+      width: rem(489);
+      height: rem(489);
+      border-radius: 100%;
+      position: absolute;
+      top: rem(-244.5);
+      left: rem(-244.5);
+      background: #c3c3c3;
+      filter: blur(rem(100));
+      display: block;
+    }
+    &::after {
+      content: "";
+      width: rem(489);
+      height: rem(489);
+      border-radius: 100%;
+      position: absolute;
+      bottom: rem(-244.5);
+      right: rem(-244.5);
+      background: #8c8c8c;
+      filter: blur(rem(100));
+      display: block;
+    }
+    &.item1 {
+      background: #fdf3d8;
+      &::before,
+      &::after {
+        background: rgba(249, 171, 1, 0.7);
+      }
+    }
+    &.item2 {
+      background: #e6e8ec;
+      img {
+        mix-blend-mode: darken;
+      }
+      &::before,
+      &::after {
+        background: #94e6fc;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .solutionSection {
+    padding: vwtb(100) 0;
+    height: 100vh;
+    :global(.container) {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      & > div {
+        height: auto;
+      }
+    }
+
+    .titWrap {
+      padding: 0;
+    }
+
+    .solutionItem {
+      height: vwtb(200);
+      border-radius: vwtb(30);
+      &::before {
+        width: vwtb(489);
+        height: vwtb(489);
+        top: vwtb(-244.5);
+        left: vwtb(-244.5);
+        filter: blur(vwtb(100));
+      }
+      &::after {
+        width: vwtb(489);
+        height: vwtb(489);
+        right: vwtb(-244.5);
+        bottom: vwtb(-244.5);
+        filter: blur(vwtb(100));
+      }
+      &.item1 {
+        img {
+            width:vwtb(230)
+        }
+      }
+      &.item2 {
+        img {
+            width:vwtb(200)
+        }
+      }
+      &.item3 {
+        img {
+            width:vwtb(160)
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+    .solutionSection {
+      padding: vwmo(100) 0;
+      height: auto;
+      :global(.container) {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        & > div {
+          height: auto;
+        }
+      }
+  
+      .titWrap {
+        padding: 0;
+      }
+  
+      .solutionItem {
+        height: vwmo(200);
+        border-radius: vwmo(30);
+        &::before {
+          width: vwmo(400);
+          height: vwmo(400);
+          top: vwmo(-200);
+          left: vwmo(-200);
+          filter: blur(vwmo(100));
+        }
+        &::after {
+          width: vwmo(400);
+          height: vwmo(400);
+          right: vwmo(-200);
+          bottom: vwmo(-200);
+          filter: blur(vwmo(100));
+        }
+        &.item1 {
+          img {
+              width:vwmo(200)
+          }
+        }
+        &.item2 {
+          img {
+              width:vwmo(170)
+          }
+        }
+        &.item3 {
+          img {
+              width:vwmo(150)
+          }
+        }
+      }
+    }
+  }
+  

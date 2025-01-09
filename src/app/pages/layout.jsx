@@ -1,7 +1,5 @@
 import "@/styles/global.scss";
 import "@/styles/font.scss";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Driven-드리븐 | 빅데이터 퍼포먼스마케팅 전문기업",
@@ -35,10 +33,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <div className="radialGradBg">
+      {children}
+      <div className="radialGradBg default">
         <img src="/image/radialGrad.png" alt="" />
       </div>
-      {children}
+      <div className="radialGradBg portfolio">
+        <img src="/image/radialGradBlack.png" alt="" />
+      </div>
     </>
   );
 }

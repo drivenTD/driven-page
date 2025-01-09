@@ -1,4 +1,4 @@
-@import "../../../styles/mixin.scss";
+@use "../../../styles/mixin" as *;
 
 .innovationSection {
   padding: rem(150) 0 0;

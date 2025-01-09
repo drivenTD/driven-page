@@ -14,6 +14,15 @@ export default function Page() {
 
     const motionElements = document.querySelectorAll(".motion");
 
+    let hasReloaded = false;
+
+    const resizeObserver = () => {
+      hasReloaded = true;
+      window.location.reload();
+    };
+
+    window.addEventListener("resize", resizeObserver);
+
     motionElements.forEach((el) => {
       ScrollTrigger.create({
         trigger: el,
@@ -37,7 +46,7 @@ export default function Page() {
   }, []);
   return (
     <div className="subTemplate">
-      <SubVisual pagePosition="COMPANY" pageName="SOLUTION" />
+      <SubVisual pagePosition="SOLUTION" pageName="SOLUTION" />
       <DatamonAbout />
       <DataEnvironment />
       <SolutionList />

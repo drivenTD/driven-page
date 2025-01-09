@@ -1,4 +1,5 @@
-@import "../../styles/mixin.scss";
+@use "../../styles/mixin" as *;
+
 
 .subVisual {
   position: relative;
@@ -6,6 +7,20 @@
   height: 100vh;
   border-bottom: 1px solid $grid-line-color;
   overflow:hidden;
+
+  &.portfolio{
+    .btnContact{
+      color:$white-color;
+    }
+    .pagePosition{
+      color:$white-color-opacity !important;
+    }
+    .subText{
+      p{
+        color:$white-color-opacity !important;
+      }
+    }
+  }
 
   .radialGrad {
     position: absolute;
@@ -84,6 +99,7 @@
   .subVisual {
     height: vwtb(800);
     padding: vwtb(234) 0 vwtb(60);
+
     .radialGrad {
       top: vwtb(0);
       right: vwtb(-1200);
@@ -128,6 +144,12 @@
     height: vwmo(1024);
     padding: vwmo(234) 0 0;
 
+    &.portfolio{
+      .pageName {
+        padding-left: vwmo(80) !important;
+      }
+    }
+
     .radialGrad {
       top: vwmo(-50);
       right: vwmo(-1050);
@@ -160,7 +182,7 @@
             margin-bottom: vwmo(20);
           }
           &.pageName {
-            padding-left: vwmo(150);
+            padding-left: vwmo(80);
           }
         }
       }

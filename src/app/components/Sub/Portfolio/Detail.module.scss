@@ -1,0 +1,127 @@
+@use "../../../styles/mixin" as *;
+
+.detailSection {
+  position: relative;
+  z-index: 15;
+  border-bottom:1px solid $grid-line-color;
+
+  h2 {
+    height: vwpc(600);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: vwpc(50);
+    font-size: vwpc(130);
+    font-weight: 700;
+    .pagePosition {
+      margin-bottom: vwpc(20);
+      font-size: vwpc(40);
+      font-weight: 300;
+      display: block;
+      color: $white-color-opacity;
+    }
+  }
+
+  .detailVisual {
+    padding-top: vwpc(700);
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: bottom !important;
+  }
+
+  .informationWrap {
+    padding: vwpc(130) 0;
+    .informationList {
+      display: flex;
+      .tit{
+        font-size: vwpc(24);
+        color:rgba(255,255,255,.6);
+        font-weight: 700;
+      }
+      .data{
+        margin-top: vwpc(30);
+        font-size: vwpc(24);
+        line-height: vwpc(34);
+      }
+    }
+  }
+}
+
+
+
+@include tablet{
+    .detailSection {
+        h2 {
+          height: vwtb(540);
+          padding-bottom: vwtb(50);
+          font-size: vwtb(100);
+          .pagePosition {
+            margin-bottom: vwtb(15);
+            font-size: vwtb(26);
+            font-weight: 300;
+          }
+        }
+      
+        .detailVisual {
+          background-size:cover !important;
+          padding-top: vwtb(640);
+        }
+      
+        .informationWrap {
+          padding: vwtb(110) 0;
+          .informationList {
+            display: flex;
+            .tit{
+              font-size: vwtb(20);
+            }
+            .data{
+              margin-top: vwtb(24);
+              font-size: vwtb(20);
+              line-height: vwtb(30);
+            }
+          }
+        }
+      }
+      
+}
+
+@include mobile{
+    .detailSection {
+        h2 {
+          height: vwmo(590);
+          padding-bottom: vwmo(120);
+          font-size: vwmo(80);
+          .pagePosition {
+            margin-bottom: vwmo(20);
+            font-size: vwmo(28);
+          }
+        }
+      
+        .detailVisual {
+          padding-top: vwmo(600);
+          background-size: cover !important;
+          background-position:top !important;
+        }
+      
+        .informationWrap {
+          padding: vwmo(110) 0;
+          .informationList {
+            display: flex;
+            flex-wrap: wrap;
+            .tit{
+              font-size: vwmo(30);
+            }
+            .data{
+              margin-top: vwmo(30);
+              font-size: vwmo(30);
+              line-height: vwmo(40);
+            }
+
+            div:nth-child(3){
+                margin-top: vwmo(50);
+            }
+          }
+        }
+      }
+      
+}

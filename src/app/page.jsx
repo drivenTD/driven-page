@@ -1,4 +1,3 @@
-"use client";
 import Visual from "@/components/Main/Visual";
 import About from "@/components/Main/About";
 import MarqueeAbout from "@/components/Main/MarqueeAbout";

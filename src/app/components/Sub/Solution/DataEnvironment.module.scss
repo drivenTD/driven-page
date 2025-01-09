@@ -1,4 +1,4 @@
-@import "../../../styles/mixin.scss";
+@use "../../../styles/mixin" as *;
 .environmentSection {
   padding: rem(150) 0;
   //   background: url("/image/solution/environmentSection.jpg") center no-repeat;

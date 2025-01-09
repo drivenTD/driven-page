@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import portfolios from "@/components/Sub/Portfolio/portfolioData";
 
 // Styles
 import styles from "./Portfolio.module.scss";
@@ -13,69 +14,12 @@ import styles from "./Portfolio.module.scss";
 import ButtonIco from "@/image/global/button/button-ico-round.svg";
 
 export default function Portfolio() {
-  const project = [
-    {
-      label: `이찬원이 선택한 <br /> 바로인 슈즈`,
-      sublabel: "바로 신는 편안함 이찬원 신발 바로인",
-      keyword: [
-        { item: "쇼핑몰 트래픽 유도" },
-        { item: "구매 전환 캠페인" },
-        { item: "브랜드 인지도 제고" },
-        { item: "ROAS 강화" }
-      ],
-      image: "/image/portfolio/portfolio01.png",
-      link: "/"
-    },
-    {
-      label: `SOFTWARE FOR<br />SAFE WORLD`,
-      sublabel: "글로벌 IT 융합 기업 슈어소프트테크",
-      keyword: [
-        { item: "Analytics 업그레이드" },
-        { item: "DB 기술 지원" },
-        { item: "그로스 컨설팅" }
-      ],
-      image: "/image/portfolio/portfolio02.png",
-      link: "/"
-    },
-    {
-      label: `ARTE<br />MUSEUM`,
-      sublabel: "빛, 소리 그리고 영원한 자연 아르뗴뮤지엄",
-      keyword: [{ item: "라스베가스, 두바이 현지 티켓 판매량 제고 프로젝트" }],
-      image: "/image/portfolio/portfolio03.png",
-      link: "/"
-    },
-    {
-      label: `BEGIC`,
-      sublabel: "기분 좋은 스킨케어 베이지크",
-      keyword: [
-        { item: "쇼핑몰 트래픽 유도" },
-        { item: "구매 전환 캠페인" },
-        { item: "ROAS 강화" }
-      ],
-      image: "/image/portfolio/portfolio04.png",
-      link: "/"
-    },
-    {
-      label: `meunde`,
-      sublabel: "자연에서 온 언더웨어 미인더",
-      keyword: [
-        { item: "쇼핑몰 트래픽 유도" },
-        { item: "구매 전환 캠페인" },
-        { item: "브랜드 인지도 제고" },
-        { item: "ROAS 강화" }
-      ],
-      image: "/image/portfolio/portfolio05.png",
-      link: "/"
-    }
-  ];
-
   useEffect(() => {
-    // GSAP ScrollTrigger 플러그인 등록
     gsap.registerPlugin(ScrollTrigger);
 
     const items = document.querySelectorAll(`.${styles.item}`);
-    const maxScale = 1; // 기본 최대 scale
-    const minScale = 0.7; // 최소 scale
+    const maxScale = 1;
+    const minScale = 0.7;
 
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -95,9 +39,8 @@ export default function Portfolio() {
     window.addEventListener("resize", resizeObserver);
 
     if (window.innerWidth > 768) {
-      // 각 아이템의 애니메이션 설정
       items.forEach((item, index) => {
-        const isLastItem = index === items.length - 1; // 마지막 아이템 여부
+        const isLastItem = index === items.length - 1;
 
         gsap.to(item, {
           scale: isLastItem ? maxScale : minScale, // 마지막 아이템은 scale 유지
@@ -105,16 +48,16 @@ export default function Portfolio() {
           opacity: isLastItem ? 1 : 0,
           scrollTrigger: {
             trigger: item,
-            start: "top 20%", // 수정된 start 값
-            end: "bottom top", // 아이템이 뷰포트에서 사라질 때 끝
-            scrub: true // 스크롤과 애니메이션 동기화
+            start: "top 20%",
+            end: "bottom top",
+            scrub: true
           }
         });
       });
     }
 
     return () => {
-      ScrollTrigger.killAll(); // ScrollTrigger 정리
+      ScrollTrigger.killAll();
       window.removeEventListener("resize", resizeObserver);
     };
   }, []);
@@ -135,26 +78,26 @@ export default function Portfolio() {
 
       <div className="container">
         <div className={`${styles.portfolioLists} col-span-15`}>
-          {project.map((item, index) => (
+          {portfolios.map((portfolio) => (
             <Link
-              key={index}
-              href={item.link}
+              key={portfolio.id}
+              href={`/pages/portfolio/${portfolio.id}/`}
               className={styles.item}
-              style={{ background: `url(${item.image}) no-repeat center` }}
+              style={{
+                background: `url(${portfolio.mainVisual}) no-repeat center`
+              }}
             >
-              <p className={styles.tit}>
-                {item.label.split("<br />").map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    {i !== item.label.split("<br />").length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-              </p>
+              <p
+                className={styles.tit}
+                dangerouslySetInnerHTML={{
+                  __html: portfolio.mainTitle
+                }}
+              />
               <div className={styles.descBox}>
-                <p className={styles.desc}>{item.sublabel}</p>
+                <p className={styles.desc}>{portfolio.title}</p>
                 <ul className={styles.descList}>
-                  {item.keyword.map((subItem, subIndex) => (
-                    <li key={subIndex}>{subItem.item}</li>
+                  {portfolio.serviceItem.map((service, index) => (
+                    <li key={index}>{service}</li>
                   ))}
                 </ul>
               </div>

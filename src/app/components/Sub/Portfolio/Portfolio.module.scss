@@ -1,0 +1,289 @@
+@use "../../../styles/mixin" as *;
+
+.portfolioSection {
+  position: relative;
+  padding: rem(120) 0;
+  min-height: 100vh;
+  .contWrap {
+    display: flex;
+    gap: rem(60);
+  }
+  .sideFilterWrap {
+    height: 100%;
+    position: sticky;
+    top: rem(110);
+    flex: 0 0 vwpc(550);
+
+    .tit {
+      font-size: vwpc(80);
+      color: $white-color;
+      font-weight: 700;
+    }
+
+    .filterList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: vwpc(10);
+      margin-top: vwpc(62);
+      li {
+        button {
+          height: vwpc(60);
+          padding: 0 vwpc(30);
+          font-size: vwpc(24);
+          color: $white-color;
+          border: 1px solid $white-color;
+          background: none;
+          border-radius: vwpc(10);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          &:hover,
+          &.active {
+            background: $main-color;
+            border-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  .portfolioListWrap {
+    width: 100%;
+    .portfolioList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: vwpc(30);
+      & > li {
+        position: relative;
+        flex: 0 0 calc(50% - vwpc(15));
+        height: vwpc(850);
+
+        &:hover {
+          a {
+            transform: translate(vwpc(15), vwpc(-15));
+            transition: all 0.5s;
+          }
+
+          &::before {
+            opacity: 1;
+            transform: translate(vwpc(-5), vwpc(5));
+            transition: all 0.5s;
+          }
+        }
+        &::before {
+          opacity: 0;
+          content: "";
+          display: block;
+          border: 1px solid $white-color-opacity;
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: vwpc(30);
+          width: 100%;
+          height: 100%;
+          transition: all 0.5s;
+        }
+
+        a {
+          transition: all 0.5s;
+          display: inline-flex;
+          flex-direction: column;
+          background-size: cover !important;
+          border-radius: vwpc(30);
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          padding: vwpc(80) vwpc(50);
+          gap: vwpc(15);
+          color: $white-color;
+          p {
+            font-size: vwpc(28);
+            font-weight: 700;
+          }
+          .serviceList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: vwpc(8);
+            li {
+              font-size: vwpc(18);
+              border: 1px solid $white-color;
+              border-radius: vwpc(20);
+              padding: vwpc(5) vwpc(10);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          margin-top: vwpc(200);
+        }
+        &:nth-child(odd):not(:first-child) {
+          margin-top: vwpc(-200);
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .portfolioSection {
+    padding: vwtb(120) 0;
+    .contWrap {
+      gap: vwtb(40);
+    }
+    .sideFilterWrap {
+      top: vwtb(100);
+      flex: 0 0 vwtb(350);
+
+      .tit {
+        font-size: vwtb(50);
+      }
+
+      .filterList {
+        gap: vwtb(8);
+        margin-top: vwtb(50);
+        li {
+          button {
+            height: vwtb(50);
+            padding: 0 vwtb(24);
+            font-size: vwtb(18);
+            border-radius: vwtb(10);
+          }
+        }
+      }
+    }
+    .portfolioListWrap {
+      .portfolioList {
+        gap: vwtb(20);
+        & > li {
+          position: relative;
+          flex: 0 0 calc(50% - vwtb(10));
+          height: vwtb(700);
+
+          &:hover {
+            a {
+              transform: translate(vwtb(15), vwtb(-15));
+            }
+
+            &::before {
+              transform: translate(vwtb(-5), vwtb(5));
+            }
+          }
+          &::before {
+            border-radius: vwtb(30);
+          }
+
+          a {
+            border-radius: vwtb(30);
+            padding: vwtb(50) vwtb(30);
+            gap: vwtb(10);
+            p {
+              font-size: vwtb(26);
+              line-height: vwtb(36);
+            }
+            .serviceList {
+              gap: vwtb(5);
+              li {
+                font-size: vwtb(15);
+                border-radius: vwtb(20);
+                padding: vwtb(3) vwtb(8);
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            margin-top: vwtb(180);
+          }
+          &:nth-child(odd):not(:first-child) {
+            margin-top: vwtb(-180);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .portfolioSection {
+    padding: vwmo(180) 0;
+    .contWrap {
+      flex-direction: column;
+      gap: vwmo(50);
+    }
+    .sideFilterWrap {
+      z-index: 1;
+      position: static;
+      .tit {
+        text-align: center;
+        font-size: vwmo(50);
+      }
+
+      .filterList {
+        width:vwmo(550);
+        margin:auto;
+        gap: vwmo(10);
+        justify-content: center;
+        margin-top: vwmo(50);
+        li {
+          button {
+            height: vwmo(60);
+            padding: 0 vwmo(30);
+            font-size: vwmo(25);
+            border-radius: vwmo(10);
+            background: $black-color;
+          }
+        }
+      }
+    }
+    .portfolioListWrap {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      .portfolioList {
+        gap: vwmo(30);
+        justify-content: center;
+        & > li {
+          flex: 0 0 vwmo(550);
+          height: vwmo(700);
+
+          &:hover {
+            a {
+              transform: translate(vwmo(15), vwmo(-15));
+            }
+
+            &::before {
+              transform: translate(vwmo(-5), vwmo(5));
+            }
+          }
+          &::before {
+            border-radius: vwmo(30);
+          }
+
+          a {
+            border-radius: vwmo(30);
+            padding: vwmo(50);
+            gap: vwmo(20);
+            p {
+              font-size: vwmo(32);
+              line-height: vwmo(42);
+            }
+            .serviceList {
+              gap: vwmo(15);
+              li {
+                font-size: vwmo(26);
+                border-radius: vwmo(20);
+                padding: vwmo(10) vwmo(15);
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            margin-top: 0;
+          }
+          &:nth-child(odd):not(:first-child) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

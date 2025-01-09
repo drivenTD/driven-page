@@ -1,0 +1,76 @@
+@use "../../../../styles/mixin" as *;
+
+.chracterSection {
+  padding: rem(150) 0 0;
+
+  .parallax__cont {
+    margin-top: rem(100);
+  }
+  .parallax__item {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center !important;
+    .titWrap {
+      .tit {
+        span {
+          margin-bottom: rem(10);
+        }
+        strong {
+          line-height: rem(64);
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .chracterSection {
+    padding: vwtb(150) 0 0;
+
+    .parallax__cont {
+      margin-top: vwtb(100);
+    }
+    .parallax__item {
+      .titWrap {
+        .tit {
+          span {
+            margin-bottom: vwtb(10);
+          }
+          strong {
+            line-height: vwtb(64);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+    .chracterSection {
+      padding: vwmo(150) 0 0;
+  
+      .parallax__cont {
+        margin-top: vwmo(100);
+      }
+      .parallax__item {
+        height:100dvh;
+        .titWrap {
+          .tit {
+            span {
+              margin-bottom: vwmo(10);
+            }
+            strong {
+              line-height: vwmo(46);
+            }
+          }
+        }
+      }
+    }
+  }

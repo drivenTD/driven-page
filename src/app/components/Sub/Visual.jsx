@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { gsap } from "gsap"; // GSAP import
-import ScrollTrigger from "gsap/ScrollTrigger";
 import styles from "./Visual.module.scss";
 
 import ButtonIco from "@/image/global/button/button-ico-round.svg";

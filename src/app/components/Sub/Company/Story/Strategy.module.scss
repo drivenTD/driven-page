@@ -1,4 +1,4 @@
-@import "../../../../styles/mixin.scss";
+@use "../../../../styles/mixin" as *;
 
 .StrategySection {
   padding: rem(150) 0;

@@ -1,0 +1,213 @@
+@use "../../../../styles/mixin" as *;
+
+.cultureSection {
+  padding: rem(150) 0;
+  background:$black-color;
+  color:$white-color;
+
+  .pageTit{
+    font-size: vwpc(100);
+    line-height: vwpc(122);
+    font-weight: 700;
+    color:$white-color-opacity;
+  }
+
+  .flexWrap{
+    display:flex;
+  }
+  .secondBox{
+    margin-top: rem(50);
+  }
+
+  .listBox{
+    .tit{
+      margin-bottom: rem(30);
+      font-size: rem(45);
+      font-weight: 700;
+    }
+    dl{
+      margin:0;
+      border-top:1px solid $grid-line-color;
+      padding:rem(30) 0;
+      dt{
+        font-size: rem(30);
+        line-height: rem(40);
+        font-weight: 700;
+      }
+      dd{
+        font-size: rem(20);
+        line-height: rem(30);
+        margin:0;
+        margin-top: rem(10);
+      }
+    }
+  }
+
+  .dataLists {
+    margin-top: rem(80);
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      .itemWrap {
+        background-color: #171d22;
+        border-radius: rem(20);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: vwpc(50);
+        padding: vwpc(50);
+        height: vwpc(400);
+      }
+      .headCont {
+        display: flex;
+        flex-direction: column;
+        gap: vwpc(10);
+        p {
+          color: $main-color;
+          min-height:vwpc(120);
+          font-size: vwpc(28);
+          line-height: vwpc(38);
+          font-weight: 700;
+        }
+        span {
+          font-size: vwpc(18);
+          color: $white-color;
+          display: block;
+          text-align: right;
+        }
+      }
+      .bodyCont {
+        font-size: vwpc(18);
+        line-height: vwpc(28);
+        color: $white-color;
+      }
+    }
+  }
+}
+
+
+@include tablet{
+  .cultureSection {
+    padding: vwtb(150) 0;
+  
+    .pageTit{
+      font-size: vwtb(46);
+      line-height: vwtb(68);
+    }
+  
+    .secondBox{
+      margin-top: vwtb(20);
+    }
+  
+    .listBox{
+      margin-top: vwtb(30);
+      .tit{
+        margin-bottom: vwtb(30);
+        font-size: vwtb(38);
+      }
+      dl{
+        margin-top: vwtb(0);
+        padding:vwtb(28) 0;
+        dt{
+          font-size: vwtb(26);
+          line-height: vwtb(36);
+        }
+        dd{
+          font-size: vwtb(16);
+          line-height: vwtb(26);
+          margin-top: vwtb(10);
+        }
+      }
+    }
+  
+    .dataLists {
+      margin-top: vwtb(100);
+      .item {
+        .itemWrap {
+          gap: vwtb(50);
+          padding: vwtb(40) vwtb(30);
+          height: vwtb(400);
+        }
+        .headCont {
+          gap: vwtb(10);
+          p {
+            font-size: vwtb(28);
+            line-height: vwtb(38);
+            min-height:vwtb(115);
+          }
+          span {
+            font-size: vwtb(18);
+          }
+        }
+        .bodyCont {
+          font-size: vwtb(18);
+          line-height: vwtb(28);
+        }
+      }
+    }
+  }
+  
+}
+
+@include mobile{
+  .cultureSection {
+    padding: vwmo(150) 0;
+  
+    .pageTit{
+      font-size: vwmo(100);
+      line-height: vwmo(122);
+    }
+  
+    .secondBox{
+      margin-top: vwmo(80);
+    }
+  
+    .flexWrap{
+      flex-direction: column;
+    }
+
+    .listBox{
+      .tit{
+        font-size: vwmo(50);
+      }
+      dl{
+        padding:vwmo(50) 0;
+        dt{
+          font-size: vwmo(34);
+          line-height: vwmo(44);
+        }
+        dd{
+          font-size: vwmo(26);
+          line-height: vwmo(36);
+          margin-top: vwmo(15);
+        }
+      }
+    }
+  
+    .dataLists {
+      .item {
+        .itemWrap {
+          gap: vwmo(50);
+          padding: vwmo(40) vwmo(30);
+          height: vwmo(400);
+        }
+        .headCont {
+          gap: vwmo(10);
+          p {
+            font-size: vwmo(30);
+            line-height: vwmo(38);
+            min-height: vwmo(120);
+          }
+          span {
+            font-size: vwmo(24);
+          }
+        }
+        .bodyCont {
+          font-size: vwmo(26);
+          line-height: vwmo(36);
+        }
+      }
+    }
+  }
+  
+}

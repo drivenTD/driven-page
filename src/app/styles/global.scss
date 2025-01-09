@@ -1,10 +1,10 @@
-@import "./reset";
-@import "./mixin";
+@use "./reset" as *;
+@use "./mixin" as *;
 
-.swiper-slide-active{
-  .slideCont{
-    background:#fff;
-      
+
+.swiper-slide-active {
+  .slideCont {
+    background: #fff;
   }
 }
 .defaultMotion {
@@ -31,15 +31,15 @@
   text-align: right;
 }
 
-.motion{
-  &.scaleUp{
-    scale:0.6;
-    opacity:0;
-    transition:all .5s;
-    &.action{
-      scale:1;
-      opacity:1;
-      transition:all .5s;
+.motion {
+  &.scaleUp {
+    scale: 0.6;
+    opacity: 0;
+    transition: all 0.5s;
+    &.action {
+      scale: 1;
+      opacity: 1;
+      transition: all 0.5s;
     }
   }
 }
@@ -81,6 +81,12 @@
       color: $white-color;
       span {
         color: $white-color-opacity;
+      }
+    }
+    &.main {
+      color: $black-color;
+      span {
+        color: $main-color;
       }
     }
     span {
@@ -153,6 +159,23 @@
   background: $sub-bg-color;
   color: $black-color;
   overflow: hidden;
+  &.portfolio {
+    background: $black-color;
+    color: $white-color;
+    left: 50%;
+
+    & ~ .portfolio{
+      display:flex;
+    }
+
+    & ~ .default{
+      display:none;
+    }
+  }
+
+  .radialGradBg {
+    display: none;
+  }
 }
 
 #wave-path {
@@ -197,7 +220,6 @@
   overflow: hidden;
   width: $single-grid-col;
   color: $white-color;
-  mix-blend-mode: difference;
   @include btn-line(rem(2), vwpc(24), rem(10), rem(15));
 
   svg {
@@ -284,18 +306,27 @@
     rgba(0, 0, 0, 0.2) 60%
   );
 }
-.radialGradBg{
-  position:absolute;
-  top:0;
-  right:0;
-  img{
-    width:vwpc(977);
+.radialGradBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  &.portfolio {
+    display: none;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+    img {
+      width: vwpc(1920);
+    }
+  }
+  img {
+    width: vwpc(977);
   }
 }
 
 @include desktop {
   .col-lg-1 {
-    width:calc(100% / 5);
+    width: calc(100% / 5);
   }
   .col-lg-2 {
     width: calc(100% / 5 * 2);
@@ -437,14 +468,13 @@
   }
 
   .col-md-span-1 {
-    padding-left:calc(100% / 4);
-    
+    padding-left: calc(100% / 4);
   }
   .col-md-span-2 {
-    padding-left:calc(100% / 4 * 2);
+    padding-left: calc(100% / 4 * 2);
   }
   .col-md-span-3 {
-    padding-left:calc(100% / 4 * 3);
+    padding-left: calc(100% / 4 * 3);
   }
 
   .col-md-line3-1 {
@@ -492,12 +522,12 @@
     }
   }
 
-  .radialGradBg{
-    position:absolute;
-    top:0;
-    right:0;
-    img{
-      width:vwtb(750);
+  .radialGradBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+      width: vwtb(750);
     }
   }
 
@@ -599,14 +629,14 @@
   }
 
   .col-xs-1 {
-    width:calc(100% / 2);
+    width: calc(100% / 2);
   }
   .col-xs-2 {
-    width:calc(100% / 2 * 2);
+    width: calc(100% / 2 * 2);
   }
 
   .col-xs-span-1 {
-    padding-left:calc(100% / 2);
+    padding-left: calc(100% / 2);
   }
 
   .grid {
@@ -619,12 +649,18 @@
     }
   }
 
-  .radialGradBg{
-    position:absolute;
-    top:vwmo(200);
-    right:0;
-    img{
-      width:vwmo(977);
+  .radialGradBg {
+    position: absolute;
+    top: vwmo(200);
+    right: 0;
+    &.portfolio {
+      top: 0;
+      img {
+        width: vwpc(1920);
+      }
+    }
+    img {
+      width: vwmo(977);
     }
   }
 

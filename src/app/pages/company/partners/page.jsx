@@ -10,6 +10,15 @@ export default function Page() {
 
     const motionElements = document.querySelectorAll(".motion");
 
+    let hasReloaded = false;
+
+    const resizeObserver = () => {
+      hasReloaded = true;
+      window.location.reload();
+    };
+
+    window.addEventListener("resize", resizeObserver);
+
     motionElements.forEach((el) => {
       ScrollTrigger.create({
         trigger: el,

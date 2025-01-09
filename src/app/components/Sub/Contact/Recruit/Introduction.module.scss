@@ -1,0 +1,182 @@
+@use "../../../../styles/mixin" as *;
+
+.introductionSection {
+  padding: rem(150) 0;
+
+  .pageTit {
+    font-size: vwpc(100);
+    line-height: vwpc(122);
+    font-weight: 700;
+  }
+
+  .tableWrap {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $black-color;
+
+    .tableHead {
+      position: sticky;
+      top: rem(110);
+      z-index: 2;
+      display: flex;
+      padding: rem(30) 0;
+      span {
+        height: rem(54);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: rem(20);
+        line-height: rem(30);
+        font-weight: 700;
+        background: $white-color;
+        border-radius: rem(10);
+      }
+    }
+    .tableBody {
+      display: flex;
+      flex-direction: column;
+      .rowItem {
+        padding: rem(30) 0;
+        display: flex;
+        align-items: center;
+        border-top: 1px solid $grid-line-color;
+
+        .fieldName {
+          font-size: rem(28);
+          line-height: rem(38);
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .list {
+          li {
+            display: flex;
+            gap: rem(10);
+            position: relative;
+            font-size: rem(18);
+            line-height: rem(28);
+            &::before {
+              content: "";
+              display: block;
+              width: rem(5);
+              height: rem(5);
+              margin-top: rem(12);
+              background: $main-color;
+              border-radius: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .introductionSection {
+    padding: vwtb(150) 0;
+
+    .pageTit {
+      font-size: vwtb(80);
+      line-height: vwtb(108);
+    }
+
+    .tableWrap {
+      .tableHead {
+        top: vwtb(90);
+        padding: vwtb(20) 0;
+        span {
+          height: vwtb(50);
+          font-size: vwtb(20);
+          line-height: vwtb(30);
+          border-radius: vwtb(10);
+        }
+      }
+      .tableBody {
+        .rowItem {
+          padding: vwtb(20) 0;
+          flex-wrap: wrap;
+          align-items: start;
+          border-top: 1px solid $grid-line-color;
+
+          .fieldName {
+            font-size: vwtb(28);
+            line-height: vwtb(38);
+            text-align: left;
+            br{
+              display:none;
+            }
+          }
+
+          .list {
+            li {
+              gap: vwtb(10);
+              font-size: vwtb(18);
+              line-height: vwtb(28);
+              &::before {
+                width: vwtb(5);
+                height: vwtb(5);
+                margin-top: vwtb(12);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .introductionSection {
+    padding: vwmo(150) 0;
+
+    .pageTit {
+      font-size: vwmo(80);
+      line-height: vwmo(102);
+    }
+
+    .tableWrap {
+      .tableHead {
+        top: vwmo(100);
+        padding: vwmo(20) 0;
+        span {
+          height: vwmo(50);
+          font-size: vwmo(26);
+          line-height: vwmo(36);
+          border-radius: vwmo(10);
+        }
+      }
+      .tableBody {
+        .rowItem {
+          padding: vwmo(20) 0;
+          flex-wrap: wrap;
+          align-items: start;
+
+          .fieldName {
+            font-size: vwmo(30);
+            line-height: vwmo(40);
+            text-align: left;
+            br{
+              display:none;
+            }
+          }
+
+          .list {
+            li {
+              gap: vwmo(10);
+              font-size: vwmo(26);
+              line-height: vwmo(36);
+              word-break:keep-all;
+              &::before {
+                flex: 0 0 vwmo(8);
+                width:auto;
+                height: vwmo(8);
+                margin-top: vwmo(15);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

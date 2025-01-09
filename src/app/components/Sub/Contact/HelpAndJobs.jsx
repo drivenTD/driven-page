@@ -33,7 +33,7 @@ export default function HelpAndJobs() {
             <div className={`${styles.item} ${styles.box2}`}>
               <p className={styles.tit}>Recruit</p>
               <p className={styles.desc}>우리는 멋진 당신을 기다립니다.</p>
-              <Link href="/" lang="en">
+              <Link href="/pages/contact/recruit" lang="en">
                 VIEW MORE <ButtonIco />
               </Link>
 

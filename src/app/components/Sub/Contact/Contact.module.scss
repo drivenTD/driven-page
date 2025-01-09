@@ -1,4 +1,4 @@
-@import "../../../styles/mixin.scss";
+@use "../../../styles/mixin" as *;
 
 .contactSection {
   padding: rem(150) 0;

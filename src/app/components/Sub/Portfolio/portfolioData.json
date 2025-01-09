@@ -1,12 +1,246 @@
 [
   {
     "id": "1",
-    "title": "프로젝트 A",
-    "description": "이것은 프로젝트 A의 설명입니다."
+    "titleLanguage": "en",
+    "mainTitle": "BAROIN",
+    "title": "바로 신는 편안함, 바로인",
+    "category": ["이커머스", "크리에이티브", "교육"],
+    "description": "소비자 인지도 및 매출 상승 프로젝트 제품의 ‘가벼움과 편안함'을 소구한 광고 소재로 효율 극대화 및 신규 유입 증대 가수 이찬원 이미지를 활용한 ASC 캠페인 운영으로 ROAS 455%를 달성",
+    "mainVisual": "/image/assets/main/portfolio01.png",
+    "detailVisual": "/image/assets/detailVisual01.png",
+    "projectVisual": "/image/assets/projectVisual01.png",
+    "thumbnailImg": "/image/assets/thumb01.png",
+    "strategyDesc": "효과적인 광고 전략을 통해 광고 효율을 극대화하고,<br class='visibleMobile' /> 불필요한 비용을 절감하며 매출 증대를 실현했습니다.<br /> 이를 통해 비즈니스의 지속 가능한 성장과 수익성 향상을 달성했습니다.",
+    "serviceItem": [
+      "쇼핑몰 트래픽 유도",
+      "구매 전환 캠페인",
+      "브랜드 인지도 제고",
+      "ROAS 강화"
+    ],
+    "section1": [
+      {
+        "title": "Achieving Results through Efficient<br/>Advertising Strategy<br class='visibleMobile'/> and Emotional Branding",
+        "desc": "효율적인 광고 전략과 창의적인 캠페인 실행을 통해<br class='visibleMobile'/> 브랜드 인지도를 높이고, 매출 증대와 고객 확보라는<br class='visibleMobile'/> 목표를 동시에 이루었습니다.",
+        "highlightList": [
+          "ROAS<span>455%</span> 달성",
+          "소비자 감성과<br/>제품의 가치를 연결한<br/>브랜딩 캠페인",
+          "가수 이찬원 모델<br/>기용으로 신규 고객 유입<span>300%</span> 증가"
+        ]
+      }
+    ],
+    "section2": [
+      {
+        "desc": "각 작업은 효율적인 광고 전략, 감성 브랜딩,<br/>그리고 가수 이찬원 모델 기용을 통한<br class='visibleMobile'/> 캠페인의 핵심을 담고 있습니다",
+        "projectDesc": [
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요."
+        ],
+        "projectImg": [
+          "/image/assets/projectImg01-01.png",
+          "/image/assets/projectImg01-02.png",
+          "/image/assets/projectImg01-03.png",
+          "/image/assets/projectImg01-04.png",
+          "/image/assets/projectImg01-05.png",
+          "/image/assets/projectImg01-06.png"
+        ]
+      }
+    ]
   },
   {
     "id": "2",
-    "title": "프로젝트 B",
-    "description": "이것은 프로젝트 B의 설명입니다."
+    "titleLanguage": "en",
+    "mainTitle": "SOFTWARE FOR<br/>SAFE WORLD",
+    "title": "글로벌 IT 융합 기업_슈어소프트테크",
+    "category": ["병의원", "IT/App", "교육"],
+    "description": "PC/Mob 홈페이지 내 GA4 통합 설치<br/>맞춤 이벤트 설계를 통해 방문자 흐름, 행동 패턴, 이탈지점, 서비스 이해척도 등 데이터 기반 마케팅 전략 고도화를 실현",
+    "mainVisual": "/image/assets/main/portfolio02.png",
+    "detailVisual": "/image/assets/detailVisual02.png",
+    "projectVisual": "/image/assets/projectVisual02.png",
+    "thumbnailImg": "/image/assets/thumb02.png",
+    "strategyDesc": "세션의 설명글이 필요합니다. 어떤 작업을 했는지 작성해 주세요.",
+    "serviceItem": ["Analytics 업그레이드", "DB 기술 지원", "그로스 컨설팅"],
+    "section1": [
+      {
+        "title": "세션의 제목 입력이 필요합니다.<br/> 제목을 입력해 주세요.",
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "highlightList": [
+          "ROAS<span>111%</span> 달성",
+          "소비자 감성과<br/>제품의 가치를 연결한<br/>브랜딩 캠페인",
+          "가수 이찬원 모델<br/>기용으로 신규 고객 유입<span>544%</span> 증가"
+        ]
+      }
+    ],
+    "section2": [
+      {
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "projectDesc": [
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요."
+        ],
+        "projectImg": [
+          "/image/assets/projectImg02-01.png",
+          "/image/assets/projectImg02-02.png",
+          "/image/assets/projectImg02-03.png",
+          "/image/assets/projectImg02-04.png",
+          "/image/assets/projectImg02-05.png",
+          "/image/assets/projectImg02-06.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "titleLanguage": "en",
+    "mainTitle": "ARTE<br/>MUSEUM",
+    "title": "빛과 소리가 만든 영원한 자연, 아르떼 뮤지엄",
+    "category": ["이커머스", "크리에이티브", "교육"],
+    "description": "라스베가스, 두바이 현지 티켓 판매량 제고 프로젝트<br/>아르떼의 독특한 몰입형 미디어아트를 전 세계 관광객에게 소개하며, 티켓팅 사이트로 유입 구글 실적최대화 캠페인 및 메타 타겟팅 고도화를 통한 ROAS494% 달성",
+    "mainVisual": "/image/assets/main/portfolio03.png",
+    "detailVisual": "/image/assets/detailVisual03.png",
+    "projectVisual": "/image/assets/projectVisual03.png",
+    "thumbnailImg": "/image/assets/thumb03.png",
+    "strategyDesc": "세션의 설명글이 필요합니다. 어떤 작업을 했는지 작성해 주세요.",
+    "serviceItem": [
+      "글로벌 구매 전환 캠페인",
+      "브랜드 인지도 제고",
+      "ROAS 강화"
+    ],
+    "section1": [
+      {
+        "title": "세션의 제목 입력이 필요합니다.<br/> 제목을 입력해 주세요.",
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "highlightList": [
+          "ROAS<span>111%</span> 달성",
+          "소비자 감성과<br/>제품의 가치를 연결한<br/>브랜딩 캠페인",
+          "가수 이찬원 모델<br/>기용으로 신규 고객 유입<span>232%</span> 증가"
+        ]
+      }
+    ],
+    "section2": [
+      {
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "projectDesc": [
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요."
+        ],
+        "projectImg": [
+          "/image/assets/projectImg03-01.png",
+          "/image/assets/projectImg03-02.png",
+          "/image/assets/projectImg03-03.png",
+          "/image/assets/projectImg03-04.png",
+          "/image/assets/projectImg03-05.png",
+          "/image/assets/projectImg03-06.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "titleLanguage": "en",
+    "mainTitle": "BEIGIC",
+    "title": "기분 좋은 스킨케어 베이지크",
+    "category": ["이커머스", "크리에이티브", "교육"],
+    "description": "소비자 인지도 및 매출 상승 프로젝트 제품의 ‘가벼움과 편안함'을 소구한 광고 소재로 효율 극대화 및 신규 유입 증대 가수 이찬원 이미지를 활용한 ASC 캠페인 운영으로 ROAS 455%를 달성",
+    "mainVisual": "/image/assets/main/portfolio04.png",
+    "detailVisual": "/image/assets/detailVisual04.png",
+    "projectVisual": "/image/assets/projectVisual04.png",
+    "thumbnailImg": "/image/assets/thumb04.png",
+    "strategyDesc": "세션의 설명글이 필요합니다. 어떤 작업을 했는지 작성해 주세요.",
+    "serviceItem": ["쇼핑몰 트래픽 유도", "구매 전환 캠페인", "ROAS 강화"],
+    "section1": [
+      {
+        "title": "세션의 제목 입력이 필요합니다.<br/> 제목을 입력해 주세요.",
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "highlightList": [
+          "ROAS<span>455%</span> 달성",
+          "소비자 감성과<br/>제품의 가치를 연결한<br/>브랜딩 캠페인",
+          "가수 이찬원 모델<br/>기용으로 신규 고객 유입<span>300%</span> 증가"
+        ]
+      }
+    ],
+    "section2": [
+      {
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "projectDesc": [
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요."
+        ],
+        "projectImg": [
+          "/image/assets/projectImg04-01.png",
+          "/image/assets/projectImg04-02.png",
+          "/image/assets/projectImg04-03.png",
+          "/image/assets/projectImg04-04.png",
+          "/image/assets/projectImg04-05.png",
+          "/image/assets/projectImg04-06.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "titleLanguage": "en",
+    "mainTitle": "meunder",
+    "title": "자연에서 온 언더웨어 미인더",
+    "category": ["이커머스", "크리에이티브", "교육"],
+    "description": "브랜드 컨셉 각인 프로젝트 나무 속옷이라는 컨셉 디벨롭 및 소비자 인지 확대 캠페인 정기적인 프로모션 기획 및 홍보 활동으로 매출 전환 향상",
+    "mainVisual": "/image/assets/main/portfolio05.png",
+    "detailVisual": "/image/assets/detailVisual05.png",
+    "projectVisual": "/image/assets/projectVisual05.png",
+    "thumbnailImg": "/image/assets/thumb05.png",
+    "strategyDesc": "세션의 설명글이 필요합니다. 어떤 작업을 했는지 작성해 주세요.",
+    "serviceItem": [
+      "쇼핑몰 트래픽 유도",
+      "구매 전환 캠페인",
+      "브랜드 인지도 제고",
+      "ROAS 강화"
+    ],
+    "section1": [
+      {
+        "title": "세션의 제목 입력이 필요합니다.<br/> 제목을 입력해 주세요.",
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "highlightList": [
+          "ROAS<span>455%</span> 달성",
+          "소비자 감성과<br/>제품의 가치를 연결한<br/>브랜딩 캠페인",
+          "가수 이찬원 모델<br/>기용으로 신규 고객 유입<span>300%</span> 증가"
+        ]
+      }
+    ],
+    "section2": [
+      {
+        "desc": "세션의 설명글 입력이 필요합니다. 설명글을 작성해 페이지를 완성해 주세요.",
+        "projectDesc": [
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요.",
+          "프로젝트 이미지의 설명글을 작성해 주세요."
+        ],
+        "projectImg": [
+          "/image/assets/projectImg05-01.png",
+          "/image/assets/projectImg05-02.png",
+          "/image/assets/projectImg05-03.png",
+          "/image/assets/projectImg05-04.png",
+          "/image/assets/projectImg05-05.png",
+          "/image/assets/projectImg05-06.png"
+        ]
+      }
+    ]
   }
 ]
